@@ -106,9 +106,13 @@ class StatefulDrawerWrapper extends React.Component {
 }
 
 StatefulDrawerWrapper.propTypes = {
+  /** Notification Panels Array */
   panels: PropTypes.array,
+  /** Is Drawer Open Bool */
   isDrawerOpen: PropTypes.bool,
+  /** has Unread Messages Bool */
   hasUnreadMessages: PropTypes.bool,
+  /** is Expanded Bool */
   isExpanded: PropTypes.bool
 };
 StatefulDrawerWrapper.defaultProps = {

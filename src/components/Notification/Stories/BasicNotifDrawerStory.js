@@ -125,6 +125,7 @@ const basicNotifDrawerStory = stories => {
                       <Notification.Info date="3/31/16" time="12:12:44 PM" />
                     </Notification.Content>
                   </Notification>
+                  <Notification loading />
                 </NotifDrawer.PanelBody>
                 <NotifDrawer.PanelAction>
                   <NotifDrawer.PanelActionLink
