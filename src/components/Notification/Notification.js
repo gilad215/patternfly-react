@@ -1,8 +1,16 @@
 import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Spinner from '../Spinner/Spinner';
 
-const Notification = ({ expanded, children, unread, className, ...props }) => {
+const Notification = ({
+  loading,
+  expanded,
+  children,
+  unread,
+  className,
+  ...props
+}) => {
   const classes = ClassNames(
     'drawer-pf-notification',
     { unread },
@@ -10,6 +18,13 @@ const Notification = ({ expanded, children, unread, className, ...props }) => {
     className
   );
 
+  if (loading) {
+    return (
+      <div className="drawer-pf-notification text-center">
+        <Spinner inline loading size="xs" /> Loading More
+      </div>
+    );
+  }
   return (
     <div className={classes} {...props}>
       {children}
@@ -24,12 +39,15 @@ Notification.propTypes = {
   /** Unread Notification Bool */
   unread: PropTypes.bool,
   /** Expanded Bool */
-  expanded: PropTypes.bool
+  expanded: PropTypes.bool,
+  /** show Loading Notification */
+  loading: PropTypes.bool
 };
 Notification.defaultProps = {
   className: '',
   unread: false,
-  expanded: false
+  expanded: false,
+  loading: false
 };
 
 export default Notification;

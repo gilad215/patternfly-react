@@ -27,7 +27,9 @@ const NotifDrawerToggle = ({ hasUnreadMessages, onClick }) => {
   );
 };
 NotifDrawerToggle.propTypes = {
+  /** has Unread Messages Bool */
   hasUnreadMessages: PropTypes.bool,
+  /** onClick func */
   onClick: PropTypes.func
 };
 NotifDrawerToggle.defaultProps = {
