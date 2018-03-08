@@ -22,9 +22,8 @@ const basicNotifDrawerStory = stories => {
         <nav className="collapse navbar-collapse">
           <ul className="nav navbar-nav navbar-right navbar-iconic">
             <li className="drawer-pf-trigger open">
-              <a href="#0" className="nav-item-iconic" onClick={handleClick}>
+              <a className="nav-item-iconic" onClick={handleClick}>
                 <span className="fa fa-bell" title="Notifications" />
-                <span className="badge badge-pf-bordered" />
               </a>
             </li>
           </ul>
@@ -34,7 +33,7 @@ const basicNotifDrawerStory = stories => {
           hide={hideBool}
         >
           <NotifDrawer.Title id="1" title="Notifications" />
-          <NotifDrawer.Accordion style={{ overflowY: 'hidden' }}>
+          <NotifDrawer.Accordion style={{ overflowY: 'auto' }}>
             <NotifDrawer.Panel>
               <NotifDrawer.PanelHeading>
                 <NotifDrawer.PanelTitle>
