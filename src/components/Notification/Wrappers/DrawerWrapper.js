@@ -26,6 +26,7 @@ const DrawerWrapper = ({
       onNotificationClick={onNotificationClick}
       onMarkPanelAsRead={onMarkPanelAsRead}
       onMarkPanelAsClear={onMarkPanelAsClear}
+      showLoading={panel.showLoading}
     />
   ));
   const noNotificationsMessage = (
@@ -47,15 +48,23 @@ const DrawerWrapper = ({
 };
 
 DrawerWrapper.propTypes = {
-  notificationPanels: PropTypes.array,
-  toggleDrawerHide: PropTypes.func,
+  /** toggleDrawer Hide/Expand func */
   toggleDrawerExpand: PropTypes.func,
-  togglePanel: PropTypes.func,
+  toggleDrawerHide: PropTypes.func,
+  /** Notification Panels Array */
+  notificationPanels: PropTypes.array,
+  /** is Expanded Bool */
   isExpanded: PropTypes.bool,
+  /** on Notification Click Func */
   onNotificationClick: PropTypes.func,
+  /** on MarkAllRead Click Func */
   onMarkPanelAsRead: PropTypes.func,
+  /** on Dropdown Link Click Func */
   onClickedLink: PropTypes.func,
-  onMarkPanelAsClear: PropTypes.func
+  /** on MarkAllClear Click Func */
+  onMarkPanelAsClear: PropTypes.func,
+  /** on togglePanel Click Func */
+  togglePanel: PropTypes.func
 };
 
 DrawerWrapper.defaultProps = {
