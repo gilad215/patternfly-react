@@ -210,9 +210,8 @@ const WrapperNotifDrawerStory = stories => {
         <nav className="collapse navbar-collapse">
           <ul className="nav navbar-nav navbar-right navbar-iconic">
             <li className="drawer-pf-trigger open">
-              <a href="#0" className="nav-item-iconic" onClick={handleClick}>
+              <a className="nav-item-iconic" onClick={handleClick}>
                 <span className="fa fa-bell" title="Notifications" />
-                <span className="badge badge-pf-bordered" />
               </a>
             </li>
           </ul>

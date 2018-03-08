@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NotifDrawer } from '../NotifDrawer/index';
 import PanelWrapper from './PanelWrapper';
+import { EmptyState, EmptyStateIcon, EmptyStateTitle } from '../../EmptyState';
 
 const DrawerWrapper = ({
   notificationPanels,
@@ -30,7 +31,10 @@ const DrawerWrapper = ({
     />
   ));
   const noNotificationsMessage = (
-    <div id="no-notifications-container">No Notifications</div>
+    <EmptyState>
+      <EmptyStateIcon name="info" />
+      <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
+    </EmptyState>
   );
 
   return (

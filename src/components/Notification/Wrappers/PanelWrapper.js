@@ -64,7 +64,7 @@ const PanelWrapper = ({
     </Notification>
   ));
   const renderClearReadButtons = (
-    <NotifDrawer.PanelAction>
+    <NotifDrawer.PanelAction key={panelkey}>
       <NotifDrawer.PanelActionLink
         className="drawer-pf-action-link"
         data-toggle="mark-all-read"
@@ -84,7 +84,7 @@ const PanelWrapper = ({
     </NotifDrawer.PanelAction>
   );
   const renderClearButton = (
-    <NotifDrawer.PanelAction>
+    <NotifDrawer.PanelAction key={panelkey}>
       <NotifDrawer.PanelActionLink
         data-toggle="clear-all"
         onClick={() => onMarkPanelAsClear(panelkey)}
@@ -115,7 +115,10 @@ const PanelWrapper = ({
             {notifications.length > 0 ? (
               [
                 showLoading
-                  ? [renderNotifications, <Notification loading />]
+                  ? [
+                      renderNotifications,
+                      <Notification key="loading" loading />
+                    ]
                   : renderNotifications,
                 unreadCount > 0 ? renderClearReadButtons : renderClearButton
               ]

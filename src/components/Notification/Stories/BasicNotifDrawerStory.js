@@ -22,9 +22,8 @@ const basicNotifDrawerStory = stories => {
         <nav className="collapse navbar-collapse">
           <ul className="nav navbar-nav navbar-right navbar-iconic">
             <li className="drawer-pf-trigger open">
-              <a href="#0" className="nav-item-iconic" onClick={handleClick}>
+              <a className="nav-item-iconic" onClick={handleClick}>
                 <span className="fa fa-bell" title="Notifications" />
-                <span className="badge badge-pf-bordered" />
               </a>
             </li>
           </ul>
@@ -34,7 +33,7 @@ const basicNotifDrawerStory = stories => {
           hide={hideBool}
         >
           <NotifDrawer.Title id="1" title="Notifications" />
-          <NotifDrawer.Accordion style={{ overflowY: 'hidden' }}>
+          <NotifDrawer.Accordion style={{ overflowY: 'auto' }}>
             <NotifDrawer.Panel>
               <NotifDrawer.PanelHeading>
                 <NotifDrawer.PanelTitle>
@@ -54,11 +53,15 @@ const basicNotifDrawerStory = stories => {
                 >
                   <Notification expanded={expandedBool}>
                     <NotifDrawer.Dropdown pullRight id="Dropdown1">
-                      <MenuItem eventKey="1" active>
+                      <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
-                      <MenuItem eventKey="2">Another Action</MenuItem>
-                      <MenuItem eventKey="3">Delete</MenuItem>
+                      <MenuItem key="2" eventKey="2">
+                        Another Action
+                      </MenuItem>
+                      <MenuItem key="3" eventKey="3">
+                        Delete
+                      </MenuItem>
                     </NotifDrawer.Dropdown>
                     <Icon className="pull-left" type="pf" name="info" />
                     <Notification.Content>
@@ -70,11 +73,15 @@ const basicNotifDrawerStory = stories => {
                   </Notification>
                   <Notification unread expanded={expandedBool}>
                     <NotifDrawer.Dropdown pullRight id="Dropdown1">
-                      <MenuItem eventKey="1" active>
+                      <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
-                      <MenuItem eventKey="2">Another Action</MenuItem>
-                      <MenuItem eventKey="3">Delete</MenuItem>
+                      <MenuItem key="2" eventKey="2">
+                        Another Action
+                      </MenuItem>
+                      <MenuItem key="3" eventKey="3">
+                        Delete
+                      </MenuItem>
                     </NotifDrawer.Dropdown>
                     <Icon className="pull-left" type="pf" name="ok" />
                     <Notification.Content>
@@ -86,11 +93,15 @@ const basicNotifDrawerStory = stories => {
                   </Notification>
                   <Notification expanded={expandedBool}>
                     <NotifDrawer.Dropdown pullRight id="DropDown2">
-                      <MenuItem eventKey="1" active>
+                      <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
-                      <MenuItem eventKey="2">Another Action</MenuItem>
-                      <MenuItem eventKey="3">Delete</MenuItem>
+                      <MenuItem key="2" eventKey="2">
+                        Another Action
+                      </MenuItem>
+                      <MenuItem key="3" eventKey="3">
+                        Delete
+                      </MenuItem>
                     </NotifDrawer.Dropdown>
                     <Icon
                       className="pull-left"
@@ -107,11 +118,15 @@ const basicNotifDrawerStory = stories => {
                   </Notification>
                   <Notification expanded={expandedBool}>
                     <NotifDrawer.Dropdown pullRight id="Dropdown3">
-                      <MenuItem eventKey="1" active>
+                      <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
-                      <MenuItem eventKey="2">Another Action</MenuItem>
-                      <MenuItem eventKey="3">Delete</MenuItem>
+                      <MenuItem key="2" eventKey="2">
+                        Another Action
+                      </MenuItem>
+                      <MenuItem key="3" eventKey="3">
+                        Delete
+                      </MenuItem>
                     </NotifDrawer.Dropdown>
                     <Icon
                       className="pull-left"

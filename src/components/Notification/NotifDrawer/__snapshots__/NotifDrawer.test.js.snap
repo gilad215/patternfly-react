@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotifDrawer Accordion is working properly 1`] = `
+<div
+  className="panel-group"
+  id="notification-drawer-accordion"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;
+
+exports[`NotifDrawer Dropdown is working properly 1`] = `
+<div
+  className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    className="dropdown-toggle btn btn-link"
+    disabled={false}
+    id="1"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    type="button"
+  >
+    <span
+      aria-hidden={true}
+      className="fa fa-ellipsis-v"
+    />
+  </button>
+  <ul
+    aria-labelledby="1"
+    className="dropdown-menu-right dropdown-menu"
+    role="menu"
+  >
+    <div
+      onKeyDown={[Function]}
+      onSelect={[Function]}
+    >
+      Child
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`NotifDrawer Panel Action and Link is working properly 1`] = `
+<div
+  className="drawer-pf-action"
+>
+  <div
+    className="drawer-pf-action-link"
+  >
+    <div>
+      Child
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotifDrawer Panel Body is working properly 1`] = `
+<div
+  className="panel-body"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;
+
+exports[`NotifDrawer Panel Counter is working properly 1`] = `
+<span
+  className="panel-counter"
+>
+  <div>
+    Child
+  </div>
+</span>
+`;
+
+exports[`NotifDrawer Panel Heading is working properly 1`] = `
+<div
+  className="panel-heading"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;
+
+exports[`NotifDrawer Panel Title is working properly 1`] = `
+<h4
+  className="panel-title"
+/>
+`;
+
+exports[`NotifDrawer Panel is working properly 1`] = `
+<div
+  className="panel panel-default"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;
+
+exports[`NotifDrawer Title is working properly 1`] = `
+<div
+  className="drawer-pf-title"
+>
+  <a
+    className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
+    onClick={null}
+  />
+  <a
+    className="drawer-pf-close pficon pficon-close"
+    onClick={null}
+  />
+  <h3
+    className="text-center"
+  >
+    Notifications
+  </h3>
+</div>
+`;
+
+exports[`NotifDrawer Toggle is working properly 1`] = `
+<button
+  className="btn btn-link"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={null}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  type="button"
+>
+  <span
+    aria-describedby="tooltip"
+    aria-hidden={true}
+    className="fa fa-bell fa-lg"
+    style={
+      Object {
+        "color": "rgb(240, 240, 240)",
+        "marginTop": "20px",
+      }
+    }
+  />
+</button>
+`;
+
+exports[`NotifDrawer is working properly 1`] = `
+<div
+  className="drawer-pf drawer-pf-notifications-non-clickable"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;

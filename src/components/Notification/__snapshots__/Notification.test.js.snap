@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Content is working properly 1`] = `
+<div
+  className="drawer-pf-notification-content"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;
+
+exports[`Notification Info is working properly 1`] = `
+<div
+  className="drawer-pf-notification-info"
+>
+  <span
+    className="date"
+  >
+    
+  </span>
+  <span
+    className="time"
+  >
+    
+  </span>
+</div>
+`;
+
+exports[`Notification Message is working properly 1`] = `
+<span
+  className="drawer-pf-notification-message"
+>
+  <div>
+    Child
+  </div>
+</span>
+`;
+
+exports[`Notification is working properly 1`] = `
+<div
+  className="drawer-pf-notification"
+>
+  <div>
+    Child
+  </div>
+</div>
+`;

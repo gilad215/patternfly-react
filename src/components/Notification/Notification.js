@@ -33,7 +33,7 @@ const Notification = ({
 };
 Notification.propTypes = {
   /** Child node - contents of the element */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /** Additional element css classes */
   className: PropTypes.string,
   /** Unread Notification Bool */
@@ -44,6 +44,7 @@ Notification.propTypes = {
   loading: PropTypes.bool
 };
 Notification.defaultProps = {
+  children: null,
   className: '',
   unread: false,
   expanded: false,
