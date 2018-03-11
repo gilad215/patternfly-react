@@ -38,6 +38,7 @@ class StatefulToggleDrawerWrapper extends React.Component {
             isDrawerOpen
             hasUnreadMessages
             updateUnreadCount={this.updateUnreadCount}
+            toggleDrawer={this.toggleDrawer}
           />
         )}
       </ul>

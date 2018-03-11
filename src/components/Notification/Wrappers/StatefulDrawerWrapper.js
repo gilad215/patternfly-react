@@ -83,7 +83,7 @@ class StatefulDrawerWrapper extends React.Component {
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
         isExpanded={this.state.isExpanded}
-        toggleDrawerHide={this.toggleDrawer}
+        toggleDrawerHide={this.props.toggleDrawer}
         onNotificationClick={this.onNotificationClick}
         onMarkPanelAsClear={this.onMarkPanelAsClear}
         onMarkPanelAsRead={this.onMarkPanelAsRead}
@@ -98,12 +98,15 @@ StatefulDrawerWrapper.propTypes = {
   /** is Expanded Bool */
   isExpanded: PropTypes.bool,
   /** updateUnreadCount Func */
-  updateUnreadCount: PropTypes.func
+  updateUnreadCount: PropTypes.func,
+  /** toggleDrawer Func */
+  toggleDrawer: PropTypes.func
 };
 StatefulDrawerWrapper.defaultProps = {
   panels: null,
   isExpanded: false,
-  updateUnreadCount: null
+  updateUnreadCount: null,
+  toggleDrawer: null
 };
 
 export default StatefulDrawerWrapper;
