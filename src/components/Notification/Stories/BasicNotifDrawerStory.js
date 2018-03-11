@@ -41,7 +41,9 @@ const basicNotifDrawerStory = stories => {
                     Notification Tab 1
                   </a>
                 </NotifDrawer.PanelTitle>
-                <NotifDrawer.PanelCounter>1 New Event</NotifDrawer.PanelCounter>
+                <NotifDrawer.PanelCounter>
+                  4 New Events
+                </NotifDrawer.PanelCounter>
               </NotifDrawer.PanelHeading>
               <NotifDrawer.PanelCollapse
                 collapseIn

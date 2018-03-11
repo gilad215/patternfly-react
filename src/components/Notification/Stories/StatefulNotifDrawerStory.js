@@ -3,273 +3,247 @@ import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates'
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import StatefulToggleDrawerWrapper from '../Wrappers/StatefulToggleDrawerWrapper';
 
-const p1notifications = [
+const p1Notifications = [
   {
-    nkey: '4',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'ok',
-      type: 'pf'
-    },
-    text: 'Success Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '4',
-    dropdown: [
-      {
-        id: '4',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 12,
+    seen: false,
+    level: 'info',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2012-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '1',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'info',
-      type: 'pf'
-    },
-    text: 'Info Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '1',
-    dropdown: [
-      {
-        id: '1',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 14,
+    seen: true,
+    level: 'warning',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2019-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '2',
-    expanded: false,
-    unread: false,
-    icon: {
-      name: 'warning-triangle-o',
-      type: 'pf'
-    },
-    text:
-      'Another Event Notification that is really long to see how it reacts on smaller screens sizes.',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '2',
-    dropdown: [
-      {
-        id: '2',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 15,
+    seen: true,
+    level: 'ok',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '3',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'error-circle-o',
-      type: 'pf'
-    },
-    text: 'Error Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '3',
-    dropdown: [
-      {
-        id: '3',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 16,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   }
 ];
-const p2notifications = [
+const p2Notifications = [
   {
-    nkey: '5',
-    expanded: false,
-    unread: false,
-    icon: {
-      name: 'ok',
-      type: 'pf'
-    },
-    text: 'Success Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '5',
-    dropdown: [
-      {
-        id: '5',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 17,
+    seen: false,
+    level: 'info',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2012-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '6',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'info',
-      type: 'pf'
-    },
-    text: 'Info Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '6',
-    dropdown: [
-      {
-        id: '6',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 18,
+    seen: true,
+    level: 'warning',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2019-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '7',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'warning-triangle-o',
-      type: 'pf'
-    },
-    text:
-      'Another Event Notification that is really long to see how it reacts on smaller screens sizes.',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '7',
-    dropdown: [
-      {
-        id: '7',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 19,
+    seen: true,
+    level: 'ok',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '8',
-    expanded: false,
-    unread: false,
-    icon: {
-      name: 'error-circle-o',
-      type: 'pf'
-    },
-    text: 'Error Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '8',
-    dropdown: [
-      {
-        id: '8',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 20,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   }
 ];
-const p3notifications = [
+const p3Notifications = [
   {
-    nkey: '5',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'ok',
-      type: 'pf'
-    },
-    text: 'Success Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '5',
-    dropdown: [
-      {
-        id: '5',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 21,
+    seen: false,
+    level: 'info',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2012-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '6',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'info',
-      type: 'pf'
-    },
-    text: 'Info Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '6',
-    dropdown: [
-      {
-        id: '6',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 22,
+    seen: true,
+    level: 'warning',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2019-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '7',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'warning-triangle-o',
-      type: 'pf'
-    },
-    text:
-      'Another Event Notification that is really long to see how it reacts on smaller screens sizes.',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '7',
-    dropdown: [
-      {
-        id: '7',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 23,
+    seen: true,
+    level: 'ok',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   },
   {
-    nkey: '8',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'error-circle-o',
-      type: 'pf'
-    },
-    text: 'Error Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '8',
-    dropdown: [
-      {
-        id: '8',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 24,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   }
 ];
+
 const panels = [
   {
     panelkey: '1',
     panelName: 'Notification Tab 1',
-    notifs: p1notifications,
+    notifs: p1Notifications,
     isExpanded: true
   },
   {
     panelkey: '2',
     panelName: 'Notification Tab 2',
-    notifs: p2notifications,
+    notifs: p2Notifications,
     isExpanded: false,
     showLoading: true
   },
   {
     panelkey: '3',
     panelName: 'Notification Tab 3',
-    notifs: p3notifications,
+    notifs: p3Notifications,
     isExpanded: false,
     showLoading: true
   }

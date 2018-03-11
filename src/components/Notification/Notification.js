@@ -3,18 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../Spinner/Spinner';
 
-const Notification = ({
-  loading,
-  expanded,
-  children,
-  unread,
-  className,
-  ...props
-}) => {
+const Notification = ({ loading, children, seen, className, ...props }) => {
   const classes = ClassNames(
     'drawer-pf-notification',
-    { unread },
-    { 'expanded-notification': expanded },
+    { unread: !seen },
     className
   );
 
@@ -36,18 +28,15 @@ Notification.propTypes = {
   children: PropTypes.node,
   /** Additional element css classes */
   className: PropTypes.string,
-  /** Unread Notification Bool */
-  unread: PropTypes.bool,
-  /** Expanded Bool */
-  expanded: PropTypes.bool,
+  /** seen Notification Bool */
+  seen: PropTypes.bool,
   /** show Loading Notification */
   loading: PropTypes.bool
 };
 Notification.defaultProps = {
   children: null,
   className: '',
-  unread: false,
-  expanded: false,
+  seen: false,
   loading: false
 };
 

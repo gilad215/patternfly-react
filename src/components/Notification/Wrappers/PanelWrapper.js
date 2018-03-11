@@ -8,6 +8,7 @@ import { Icon } from '../../Icon';
 import { Button } from '../../Button';
 import { MenuItem } from '../../MenuItem';
 import { EmptyState, EmptyStateTitle, EmptyStateIcon } from '../../../index';
+import getIconClass from './Icon.consts';
 
 const PanelWrapper = ({
   panelkey,
@@ -23,7 +24,7 @@ const PanelWrapper = ({
   showLoading
 }) => {
   const classes = ClassNames({ expanded: isExpanded }, className);
-  const unreadCount = notifications.filter(notification => notification.unread)
+  const unreadCount = notifications.filter(notification => !notification.seen)
     .length;
 
   const getUnread = () => {
@@ -32,17 +33,13 @@ const PanelWrapper = ({
   };
 
   const renderNotifications = notifications.map((notification, i) => (
-    <Notification
-      key={i}
-      expanded={notification.expanded}
-      unread={notification.unread}
-    >
-      <NotifDrawer.Dropdown pullRight id={notification.dropdownid}>
-        {notification.dropdown.map((link, j) => (
+    <Notification key={i} seen={notification.seen}>
+      <NotifDrawer.Dropdown pullRight id={i}>
+        {notification.actions.links.map((link, j) => (
           <MenuItem
             key={j}
-            id={`notification-kebab-${i}`}
-            onClick={onClickedLink}
+            id={`notification-kebab-${j}`}
+            onClick={() => onClickedLink(link.href)}
           >
             {link.title}
           </MenuItem>
@@ -50,16 +47,19 @@ const PanelWrapper = ({
       </NotifDrawer.Dropdown>
       <Icon
         className="pull-left"
-        type={notification.icon.type}
-        name={notification.icon.name}
+        type="pf"
+        name={getIconClass(notification.level)}
       />
       <Notification.Content>
         <Notification.Message
-          onClick={() => onNotificationClick(panelkey, notification.nkey)}
+          onClick={() => onNotificationClick(panelkey, notification.id)}
         >
           {notification.text}
         </Notification.Message>
-        <Notification.Info date={notification.date} time={notification.time} />
+        <Notification.Info
+          date={new Date(notification.created_at).toLocaleDateString()}
+          time={new Date(notification.created_at).toLocaleTimeString()}
+        />
       </Notification.Content>
     </Notification>
   ));

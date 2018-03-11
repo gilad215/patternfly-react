@@ -12,11 +12,15 @@ class StatefulDrawerWrapper extends React.Component {
     };
   }
 
+  onClickLink = url => {
+    window.open(url);
+  };
+
   onMarkPanelAsRead = panelkey => {
     const panels = this.state.panels.map(panel => {
       if (panel.panelkey === panelkey) {
         panel.notifs.map(notification => {
-          notification.unread = false;
+          notification.seen = true;
           return notification;
         });
       }
@@ -39,7 +43,7 @@ class StatefulDrawerWrapper extends React.Component {
     const panels = this.state.panels.map(panel => {
       if (panel.panelkey === panelkey) {
         panel.notifs.map(notification => {
-          if (notification.nkey === nkey) notification.unread = false;
+          if (notification.id === nkey) notification.seen = true;
           return notification;
         });
       }
@@ -68,7 +72,7 @@ class StatefulDrawerWrapper extends React.Component {
     let hasunread = false;
     for (let i = 0; i < this.state.panels.length; i++) {
       for (let j = 0; j < this.state.panels[i].notifs.length; j++) {
-        if (this.state.panels[i].notifs[j].unread === true) {
+        if (this.state.panels[i].notifs[j].seen === false) {
           hasunread = true;
         }
       }
@@ -87,6 +91,7 @@ class StatefulDrawerWrapper extends React.Component {
         onNotificationClick={this.onNotificationClick}
         onMarkPanelAsClear={this.onMarkPanelAsClear}
         onMarkPanelAsRead={this.onMarkPanelAsRead}
+        onClickedLink={this.onClickLink}
       />
     );
   }
