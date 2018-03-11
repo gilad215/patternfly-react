@@ -1,7 +1,7 @@
 import React from 'react';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
-import StatefulDrawerWrapper from '../Wrappers/StatefulDrawerWrapper';
+import StatefulToggleDrawerWrapper from '../Wrappers/StatefulToggleDrawerWrapper';
 
 const p1notifications = [
   {
@@ -280,7 +280,7 @@ const StatefulNotifDrawerStory = stories => {
     const story = (
       <nav className="navbar navbar-pf-vertical" style={{ minHeight: '60px' }}>
         <nav className="collapse navbar-collapse">
-          <StatefulDrawerWrapper
+          <StatefulToggleDrawerWrapper
             panels={panels}
             isDrawerOpen
             hasUnreadMessages

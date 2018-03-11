@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NotifDrawerToggle } from '../NotifDrawer/index';
 import DrawerWrapper from './DrawerWrapper';
 
 class StatefulDrawerWrapper extends React.Component {
@@ -9,8 +8,6 @@ class StatefulDrawerWrapper extends React.Component {
 
     this.state = {
       panels: props.panels,
-      isDrawerOpen: props.isDrawerOpen,
-      hasUnreadMessages: props.hasUnreadMessages,
       isExpanded: props.isExpanded
     };
   }
@@ -25,7 +22,8 @@ class StatefulDrawerWrapper extends React.Component {
       }
       return panel;
     });
-    this.setState({ panels, hasUnreadMessages: this.updateUnreadCount() });
+    this.setState({ panels });
+    this.updateUnreadCount();
   };
 
   onMarkPanelAsClear = key => {
@@ -33,7 +31,8 @@ class StatefulDrawerWrapper extends React.Component {
       if (panel.panelkey === key) panel.notifs = [];
       return panel;
     });
-    this.setState({ panels, hasUnreadMessages: this.updateUnreadCount() });
+    this.setState({ panels });
+    this.updateUnreadCount();
   };
 
   onNotificationClick = (panelkey, nkey) => {
@@ -46,7 +45,8 @@ class StatefulDrawerWrapper extends React.Component {
       }
       return panel;
     });
-    this.setState({ panels, hasUnreadMessages: this.updateUnreadCount() });
+    this.setState({ panels });
+    this.updateUnreadCount();
   };
 
   togglePanel = key => {
@@ -58,12 +58,6 @@ class StatefulDrawerWrapper extends React.Component {
     this.setState({ panels });
   };
 
-  toggleDrawer = () => {
-    this.setState(prevState => ({
-      isDrawerOpen: !prevState.isDrawerOpen
-    }));
-  };
-
   toggleDrawerExpand = () => {
     this.setState(prevState => ({
       isExpanded: !prevState.isExpanded
@@ -71,36 +65,29 @@ class StatefulDrawerWrapper extends React.Component {
   };
 
   updateUnreadCount = () => {
+    let hasunread = false;
     for (let i = 0; i < this.state.panels.length; i++) {
       for (let j = 0; j < this.state.panels[i].notifs.length; j++) {
         if (this.state.panels[i].notifs[j].unread === true) {
-          return true;
+          hasunread = true;
         }
       }
     }
-    return false;
+    this.props.updateUnreadCount(hasunread);
   };
 
   render() {
     return (
-      <ul className="nav navbar-nav navbar-right navbar-iconic">
-        <NotifDrawerToggle
-          hasUnreadMessages={this.state.hasUnreadMessages}
-          onClick={this.toggleDrawer}
-        />
-        {this.state.isDrawerOpen && (
-          <DrawerWrapper
-            notificationPanels={this.state.panels}
-            togglePanel={this.togglePanel}
-            toggleDrawerExpand={this.toggleDrawerExpand}
-            isExpanded={this.state.isExpanded}
-            toggleDrawerHide={this.toggleDrawer}
-            onNotificationClick={this.onNotificationClick}
-            onMarkPanelAsClear={this.onMarkPanelAsClear}
-            onMarkPanelAsRead={this.onMarkPanelAsRead}
-          />
-        )}
-      </ul>
+      <DrawerWrapper
+        notificationPanels={this.state.panels}
+        togglePanel={this.togglePanel}
+        toggleDrawerExpand={this.toggleDrawerExpand}
+        isExpanded={this.state.isExpanded}
+        toggleDrawerHide={this.toggleDrawer}
+        onNotificationClick={this.onNotificationClick}
+        onMarkPanelAsClear={this.onMarkPanelAsClear}
+        onMarkPanelAsRead={this.onMarkPanelAsRead}
+      />
     );
   }
 }
@@ -108,18 +95,15 @@ class StatefulDrawerWrapper extends React.Component {
 StatefulDrawerWrapper.propTypes = {
   /** Notification Panels Array */
   panels: PropTypes.array,
-  /** Is Drawer Open Bool */
-  isDrawerOpen: PropTypes.bool,
-  /** has Unread Messages Bool */
-  hasUnreadMessages: PropTypes.bool,
   /** is Expanded Bool */
-  isExpanded: PropTypes.bool
+  isExpanded: PropTypes.bool,
+  /** updateUnreadCount Func */
+  updateUnreadCount: PropTypes.func
 };
 StatefulDrawerWrapper.defaultProps = {
   panels: null,
-  isDrawerOpen: false,
-  hasUnreadMessages: false,
-  isExpanded: false
+  isExpanded: false,
+  updateUnreadCount: null
 };
 
 export default StatefulDrawerWrapper;
