@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import PanelWraper from './PanelWrapper';
 import DrawerWrapper from './DrawerWrapper';
 import StatefulDrawerWrapper from './StatefulDrawerWrapper';
+import StatefulToggleDrawerWrapper from './StatefulToggleDrawerWrapper';
 
 const notification = [
   {
@@ -74,11 +75,19 @@ test('DrawerWraper is working properly', () => {
 
 test('StatefulDrawerWrapper is working properly', () => {
   const component = renderer.create(
-    <StatefulDrawerWrapper
+    <StatefulDrawerWrapper panels={panel} isExpanded />
+  );
+
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('StatefulToggleDrawerWrapper is working properly', () => {
+  const component = renderer.create(
+    <StatefulToggleDrawerWrapper
       panels={panel}
       isDrawerOpen
       hasUnreadMessages
-      isExpanded
     />
   );
 

@@ -321,6 +321,176 @@ exports[`PanelWraper is working properly 1`] = `
 `;
 
 exports[`StatefulDrawerWrapper is working properly 1`] = `
+<div
+  className="drawer-pf drawer-pf-notifications-non-clickable drawer-pf-expanded"
+>
+  <div
+    className="drawer-pf-title"
+  >
+    <a
+      className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
+      onClick={[Function]}
+    />
+    <a
+      className="drawer-pf-close pficon pficon-close"
+      onClick={[Function]}
+    />
+    <h3
+      className="text-center"
+    >
+      Notifications
+    </h3>
+  </div>
+  <div
+    className="panel-group"
+    id="notification-drawer-accordion"
+  >
+    <div
+      className="panel panel-default expanded"
+    >
+      <div
+        className="panel-heading"
+        onClick={[Function]}
+      >
+        <h4
+          className="panel-title"
+        >
+          <a
+            className=""
+          >
+            Notification Tab 1
+          </a>
+        </h4>
+        <span
+          className="panel-counter"
+        >
+          1 New Event
+        </span>
+      </div>
+      <div
+        aria-expanded={null}
+        className="panel-collapse collapse in collapse in"
+        id="1"
+      >
+        <div
+          className="panel-body"
+        >
+          <div
+            className="drawer-pf-notification unread"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id="4"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby="4"
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Dropdown Link
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-ok pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Success Notification
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  3/31/16
+                </span>
+                <span
+                  className="time"
+                >
+                  12:12:44 PM
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-action"
+          >
+            <div
+              className="drawer-pf-action-link drawer-pf-action-link"
+              data-toggle="mark-all-read"
+              onClick={[Function]}
+            >
+              <button
+                className="btn btn-link"
+                disabled={false}
+                type="button"
+              >
+                Mark All Read
+              </button>
+            </div>
+            <div
+              className="drawer-pf-action-link"
+              data-toggle="clear-all"
+              onClick={[Function]}
+            >
+              <button
+                className="btn btn-link"
+                disabled={false}
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  className="pficon pficon-close"
+                />
+                Clear All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
 <ul
   className="nav navbar-nav navbar-right navbar-iconic"
 >
@@ -347,7 +517,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
     />
   </button>
   <div
-    className="drawer-pf drawer-pf-notifications-non-clickable drawer-pf-expanded"
+    className="drawer-pf drawer-pf-notifications-non-clickable"
   >
     <div
       className="drawer-pf-title"
