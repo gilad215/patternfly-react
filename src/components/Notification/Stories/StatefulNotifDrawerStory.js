@@ -1,4 +1,5 @@
 import React from 'react';
+import { boolean } from '@storybook/addon-knobs';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import StatefulToggleDrawerWrapper from '../Wrappers/StatefulToggleDrawerWrapper';
@@ -258,6 +259,7 @@ const StatefulNotifDrawerStory = stories => {
             panels={panels}
             isDrawerOpen
             hasUnreadMessages
+            isExpandable={boolean('is Drawer Expandable', true)}
           />
         </nav>
       </nav>

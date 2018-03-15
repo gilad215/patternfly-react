@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Icon } from '../../Icon';
 
 const NotifDrawerTitle = ({
+  expandable,
   onCloseClick,
   onExpandClick,
   title,
@@ -13,9 +14,20 @@ const NotifDrawerTitle = ({
 }) => {
   const classes = ClassNames('drawer-pf-title', className);
 
+  if (expandable) {
+    return (
+      <div className={classes} {...props}>
+        <a className="drawer-pf-toggle-expand" onClick={onExpandClick} />
+        <a className="drawer-pf-close" onClick={onCloseClick}>
+          <Icon name="close" />
+        </a>
+        <h3 className="text-center">{title}</h3>
+        {children}
+      </div>
+    );
+  }
   return (
     <div className={classes} {...props}>
-      <a className="drawer-pf-toggle-expand" onClick={onExpandClick} />
       <a className="drawer-pf-close" onClick={onCloseClick}>
         <Icon name="close" />
       </a>
@@ -33,14 +45,17 @@ NotifDrawerTitle.propTypes = {
   title: PropTypes.string,
   /** Close/Expand Functions */
   onCloseClick: PropTypes.func,
-  onExpandClick: PropTypes.func
+  onExpandClick: PropTypes.func,
+  /** is the Drawer expandable prop */
+  expandable: PropTypes.bool
 };
 NotifDrawerTitle.defaultProps = {
   className: '',
   title: 'Notifications',
   onCloseClick: null,
   onExpandClick: null,
-  children: null
+  children: null,
+  expandable: true
 };
 
 export default NotifDrawerTitle;

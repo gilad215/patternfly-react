@@ -8,6 +8,7 @@ const DrawerWrapper = ({
   notificationPanels,
   toggleDrawerHide,
   toggleDrawerExpand,
+  isExpandable,
   isExpanded,
   togglePanel,
   onNotificationClick,
@@ -42,6 +43,7 @@ const DrawerWrapper = ({
       <NotifDrawer.Title
         title="Notifications"
         onCloseClick={() => toggleDrawerHide()}
+        expandable={isExpandable}
         onExpandClick={toggleDrawerExpand}
       />
       <NotifDrawer.Accordion>
@@ -68,7 +70,9 @@ DrawerWrapper.propTypes = {
   /** on MarkAllClear Click Func */
   onMarkPanelAsClear: PropTypes.func,
   /** on togglePanel Click Func */
-  togglePanel: PropTypes.func
+  togglePanel: PropTypes.func,
+  /** is Drawer Expandable */
+  isExpandable: PropTypes.bool
 };
 
 DrawerWrapper.defaultProps = {
@@ -80,7 +84,8 @@ DrawerWrapper.defaultProps = {
   onNotificationClick: null,
   onMarkPanelAsRead: null,
   onClickedLink: null,
-  onMarkPanelAsClear: null
+  onMarkPanelAsClear: null,
+  isExpandable: true
 };
 
 export default DrawerWrapper;

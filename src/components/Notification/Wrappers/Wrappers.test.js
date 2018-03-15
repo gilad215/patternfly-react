@@ -99,7 +99,11 @@ test('StatefulToggleDrawerWrapper is working properly', () => {
 
 test('getIconClass is working properly', () => {
   const component = renderer.create(
-    <Icon type="pf" name={getIconClass('ok')} />
+    <div>
+      <Icon type="pf" name={getIconClass('ok')} />
+      <Icon type="pf" name={getIconClass('info')} />
+      <Icon type="pf" name={getIconClass('warning')} />
+    </div>
   );
 
   const tree = component.toJSON();
