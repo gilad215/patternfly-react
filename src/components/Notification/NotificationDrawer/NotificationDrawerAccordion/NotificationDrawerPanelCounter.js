@@ -2,7 +2,7 @@ import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotifDrawerPanelCounter = ({ children, className, ...props }) => {
+const NotificationDrawerPanelCounter = ({ children, className, ...props }) => {
   const classes = ClassNames('panel-counter', className);
 
   return (
@@ -11,14 +11,14 @@ const NotifDrawerPanelCounter = ({ children, className, ...props }) => {
     </span>
   );
 };
-NotifDrawerPanelCounter.propTypes = {
+NotificationDrawerPanelCounter.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node.isRequired,
   /** Additional element css classes */
   className: PropTypes.string
 };
-NotifDrawerPanelCounter.defaultProps = {
+NotificationDrawerPanelCounter.defaultProps = {
   className: ''
 };
 
-export default NotifDrawerPanelCounter;
+export default NotificationDrawerPanelCounter;

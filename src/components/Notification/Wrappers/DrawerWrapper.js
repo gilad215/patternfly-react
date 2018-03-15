@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NotifDrawer } from '../NotifDrawer/index';
+import { NotificationDrawer } from '../NotificationDrawer/index';
 import PanelWrapper from './PanelWrapper';
 import { EmptyState, EmptyStateIcon, EmptyStateTitle } from '../../EmptyState';
 
@@ -39,17 +39,17 @@ const DrawerWrapper = ({
   );
 
   return (
-    <NotifDrawer expanded={isExpanded}>
-      <NotifDrawer.Title
+    <NotificationDrawer expanded={isExpanded}>
+      <NotificationDrawer.Title
         title="Notifications"
         onCloseClick={() => toggleDrawerHide()}
         expandable={isExpandable}
         onExpandClick={toggleDrawerExpand}
       />
-      <NotifDrawer.Accordion>
+      <NotificationDrawer.Accordion>
         {panels.length === 0 ? noNotificationsMessage : panels}
-      </NotifDrawer.Accordion>
-    </NotifDrawer>
+      </NotificationDrawer.Accordion>
+    </NotificationDrawer>
   );
 };
 

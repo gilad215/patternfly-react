@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotifDrawer Accordion is working properly 1`] = `
+exports[`NotificationDrawer Accordion is working properly 1`] = `
 <div
   className="panel-group"
   id="notification-drawer-accordion"
@@ -11,7 +11,7 @@ exports[`NotifDrawer Accordion is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Dropdown is working properly 1`] = `
+exports[`NotificationDrawer Dropdown is working properly 1`] = `
 <div
   className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
 >
@@ -46,7 +46,7 @@ exports[`NotifDrawer Dropdown is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Panel Action and Link is working properly 1`] = `
+exports[`NotificationDrawer Panel Action and Link is working properly 1`] = `
 <div
   className="drawer-pf-action"
 >
@@ -60,7 +60,7 @@ exports[`NotifDrawer Panel Action and Link is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Panel Body is working properly 1`] = `
+exports[`NotificationDrawer Panel Body is working properly 1`] = `
 <div
   className="panel-body"
 >
@@ -70,7 +70,7 @@ exports[`NotifDrawer Panel Body is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Panel Counter is working properly 1`] = `
+exports[`NotificationDrawer Panel Counter is working properly 1`] = `
 <span
   className="panel-counter"
 >
@@ -80,7 +80,7 @@ exports[`NotifDrawer Panel Counter is working properly 1`] = `
 </span>
 `;
 
-exports[`NotifDrawer Panel Heading is working properly 1`] = `
+exports[`NotificationDrawer Panel Heading is working properly 1`] = `
 <div
   className="panel-heading"
 >
@@ -90,13 +90,13 @@ exports[`NotifDrawer Panel Heading is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Panel Title is working properly 1`] = `
+exports[`NotificationDrawer Panel Title is working properly 1`] = `
 <h4
   className="panel-title"
 />
 `;
 
-exports[`NotifDrawer Panel is working properly 1`] = `
+exports[`NotificationDrawer Panel is working properly 1`] = `
 <div
   className="panel panel-default"
 >
@@ -106,7 +106,7 @@ exports[`NotifDrawer Panel is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Title is working properly 1`] = `
+exports[`NotificationDrawer Title is working properly 1`] = `
 <div
   className="drawer-pf-title"
 >
@@ -131,7 +131,7 @@ exports[`NotifDrawer Title is working properly 1`] = `
 </div>
 `;
 
-exports[`NotifDrawer Toggle is working properly 1`] = `
+exports[`NotificationDrawer Toggle is working properly 1`] = `
 <button
   className="btn btn-link"
   disabled={false}
@@ -156,7 +156,7 @@ exports[`NotifDrawer Toggle is working properly 1`] = `
 </button>
 `;
 
-exports[`NotifDrawer is working properly 1`] = `
+exports[`NotificationDrawer is working properly 1`] = `
 <div
   className="drawer-pf drawer-pf-notifications-non-clickable"
 >

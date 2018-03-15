@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from 'react-bootstrap';
 import { Notification } from '../index';
-import { NotifDrawer } from '../NotifDrawer/index';
+import { NotificationDrawer } from '../NotificationDrawer/index';
 import { Icon } from '../../Icon';
 import { Button } from '../../Button';
 import { MenuItem } from '../../MenuItem';
@@ -34,7 +34,7 @@ const PanelWrapper = ({
 
   const renderNotifications = notifications.map((notification, i) => (
     <Notification key={i} seen={notification.seen}>
-      <NotifDrawer.Dropdown pullRight id={i}>
+      <NotificationDrawer.Dropdown pullRight id={i}>
         {notification.actions.links.map((link, j) => (
           <MenuItem
             key={j}
@@ -44,7 +44,7 @@ const PanelWrapper = ({
             {link.title}
           </MenuItem>
         ))}
-      </NotifDrawer.Dropdown>
+      </NotificationDrawer.Dropdown>
       <Icon
         className="pull-left"
         type="pf"
@@ -64,15 +64,15 @@ const PanelWrapper = ({
     </Notification>
   ));
   const renderClearReadButtons = (
-    <NotifDrawer.PanelAction key={panelkey}>
-      <NotifDrawer.PanelActionLink
+    <NotificationDrawer.PanelAction key={panelkey}>
+      <NotificationDrawer.PanelActionLink
         className="drawer-pf-action-link"
         data-toggle="mark-all-read"
         onClick={() => onMarkPanelAsRead(panelkey)}
       >
         <Button bsStyle="link">Mark All Read</Button>
-      </NotifDrawer.PanelActionLink>
-      <NotifDrawer.PanelActionLink
+      </NotificationDrawer.PanelActionLink>
+      <NotificationDrawer.PanelActionLink
         data-toggle="clear-all"
         onClick={() => onMarkPanelAsClear(panelkey)}
       >
@@ -80,12 +80,12 @@ const PanelWrapper = ({
           <Icon type="pf" name="close" />
           Clear All
         </Button>
-      </NotifDrawer.PanelActionLink>
-    </NotifDrawer.PanelAction>
+      </NotificationDrawer.PanelActionLink>
+    </NotificationDrawer.PanelAction>
   );
   const renderClearButton = (
-    <NotifDrawer.PanelAction key={panelkey}>
-      <NotifDrawer.PanelActionLink
+    <NotificationDrawer.PanelAction key={panelkey}>
+      <NotificationDrawer.PanelActionLink
         data-toggle="clear-all"
         onClick={() => onMarkPanelAsClear(panelkey)}
       >
@@ -93,25 +93,27 @@ const PanelWrapper = ({
           <Icon type="pf" name="close" />
           Clear All
         </Button>
-      </NotifDrawer.PanelActionLink>
-    </NotifDrawer.PanelAction>
+      </NotificationDrawer.PanelActionLink>
+    </NotificationDrawer.PanelAction>
   );
 
   return (
-    <NotifDrawer.Panel className={classes}>
-      <NotifDrawer.PanelHeading onClick={() => togglePanel(panelkey)}>
-        <NotifDrawer.PanelTitle>
+    <NotificationDrawer.Panel className={classes}>
+      <NotificationDrawer.PanelHeading onClick={() => togglePanel(panelkey)}>
+        <NotificationDrawer.PanelTitle>
           <a className={isExpanded ? '' : 'collapsed'}>{panelName}</a>
-        </NotifDrawer.PanelTitle>
-        <NotifDrawer.PanelCounter>{getUnread()}</NotifDrawer.PanelCounter>
-      </NotifDrawer.PanelHeading>
+        </NotificationDrawer.PanelTitle>
+        <NotificationDrawer.PanelCounter>
+          {getUnread()}
+        </NotificationDrawer.PanelCounter>
+      </NotificationDrawer.PanelHeading>
       <Collapse in={isExpanded}>
-        <NotifDrawer.PanelCollapse
+        <NotificationDrawer.PanelCollapse
           aria-expanded="true"
           id={panelkey}
           collapseIn={isExpanded}
         >
-          <NotifDrawer.PanelBody>
+          <NotificationDrawer.PanelBody>
             {notifications.length > 0 ? (
               [
                 showLoading
@@ -128,10 +130,10 @@ const PanelWrapper = ({
                 <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
               </EmptyState>
             )}
-          </NotifDrawer.PanelBody>
-        </NotifDrawer.PanelCollapse>
+          </NotificationDrawer.PanelBody>
+        </NotificationDrawer.PanelCollapse>
       </Collapse>
-    </NotifDrawer.Panel>
+    </NotificationDrawer.Panel>
   );
 };
 

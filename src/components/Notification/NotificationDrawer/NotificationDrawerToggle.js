@@ -5,7 +5,7 @@ import { Tooltip } from '../../Tooltip';
 import { Icon } from '../../Icon';
 import { Button } from '../../Button';
 
-const NotifDrawerToggle = ({ hasUnreadMessages, onClick }) => {
+const NotificationDrawerToggle = ({ hasUnreadMessages, onClick }) => {
   const iconName = hasUnreadMessages ? 'bell' : 'bell-o';
   const tooltip = <Tooltip id="tooltip">Notifications</Tooltip>;
 
@@ -26,15 +26,15 @@ const NotifDrawerToggle = ({ hasUnreadMessages, onClick }) => {
     </OverlayTrigger>
   );
 };
-NotifDrawerToggle.propTypes = {
+NotificationDrawerToggle.propTypes = {
   /** has Unread Messages Bool */
   hasUnreadMessages: PropTypes.bool,
   /** onClick func */
   onClick: PropTypes.func
 };
-NotifDrawerToggle.defaultProps = {
+NotificationDrawerToggle.defaultProps = {
   hasUnreadMessages: true,
   onClick: null
 };
 
-export default NotifDrawerToggle;
+export default NotificationDrawerToggle;

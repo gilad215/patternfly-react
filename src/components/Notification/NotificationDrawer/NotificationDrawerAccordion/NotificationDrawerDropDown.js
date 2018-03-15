@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Dropdown } from '../../../Dropdown';
 import { Icon } from '../../../Icon';
 
-const NotifDrawerDropDown = ({
+const NotificationDrawerDropDown = ({
   id,
   children,
   className,
@@ -27,7 +27,7 @@ const NotifDrawerDropDown = ({
     </Dropdown>
   );
 };
-NotifDrawerDropDown.propTypes = {
+NotificationDrawerDropDown.propTypes = {
   /** dropdown button id */
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Child node - contents of the element */
@@ -37,9 +37,9 @@ NotifDrawerDropDown.propTypes = {
   /** menu right aligned */
   pullRight: PropTypes.bool
 };
-NotifDrawerDropDown.defaultProps = {
+NotificationDrawerDropDown.defaultProps = {
   pullRight: true,
   id: null,
   className: ''
 };
-export default NotifDrawerDropDown;
+export default NotificationDrawerDropDown;

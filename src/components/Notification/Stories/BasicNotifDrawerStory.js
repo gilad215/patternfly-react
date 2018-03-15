@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import { Notification } from '../index';
-import { NotifDrawer } from '../NotifDrawer/index';
+import { NotificationDrawer } from '../NotificationDrawer/index';
 import { Icon } from '../../Icon';
 import { MenuItem } from '../../MenuItem';
 import { Button } from '../../Button';
@@ -14,7 +14,7 @@ const handleClick = e => {
   action('some on click')();
 };
 const expandedBool = boolean('Expanded Drawer', false);
-const basicNotifDrawerStory = stories => {
+const basicNotificationDrawerStory = stories => {
   stories.addWithInfo('Notification Drawer', '', () => {
     const story = (
       <nav className="navbar navbar-pf-vertical">
@@ -27,30 +27,30 @@ const basicNotifDrawerStory = stories => {
             </li>
           </ul>
         </nav>
-        <NotifDrawer expanded={expandedBool}>
-          <NotifDrawer.Title id="1" title="Notifications" />
-          <NotifDrawer.Accordion style={{ overflowY: 'auto' }}>
-            <NotifDrawer.Panel>
-              <NotifDrawer.PanelHeading>
-                <NotifDrawer.PanelTitle>
+        <NotificationDrawer expanded={expandedBool}>
+          <NotificationDrawer.Title id="1" title="Notifications" />
+          <NotificationDrawer.Accordion style={{ overflowY: 'auto' }}>
+            <NotificationDrawer.Panel>
+              <NotificationDrawer.PanelHeading>
+                <NotificationDrawer.PanelTitle>
                   <a onClick={handleClick} aria-expanded="true">
                     Notification Tab 1
                   </a>
-                </NotifDrawer.PanelTitle>
-                <NotifDrawer.PanelCounter>
+                </NotificationDrawer.PanelTitle>
+                <NotificationDrawer.PanelCounter>
                   3 New Events
-                </NotifDrawer.PanelCounter>
-              </NotifDrawer.PanelHeading>
-              <NotifDrawer.PanelCollapse
+                </NotificationDrawer.PanelCounter>
+              </NotificationDrawer.PanelHeading>
+              <NotificationDrawer.PanelCollapse
                 collapseIn
                 aria-expanded="true"
                 id="fixedCollapseOne"
               >
-                <NotifDrawer.PanelBody
+                <NotificationDrawer.PanelBody
                   style={{ maxHeight: 550, overflowY: 'auto' }}
                 >
                   <Notification seen>
-                    <NotifDrawer.Dropdown pullRight id="Dropdown1">
+                    <NotificationDrawer.Dropdown pullRight id="Dropdown1">
                       <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
@@ -60,7 +60,7 @@ const basicNotifDrawerStory = stories => {
                       <MenuItem key="3" eventKey="3">
                         Delete
                       </MenuItem>
-                    </NotifDrawer.Dropdown>
+                    </NotificationDrawer.Dropdown>
                     <Icon className="pull-left" type="pf" name="info" />
                     <Notification.Content>
                       <Notification.Message>
@@ -70,7 +70,7 @@ const basicNotifDrawerStory = stories => {
                     </Notification.Content>
                   </Notification>
                   <Notification seen={false}>
-                    <NotifDrawer.Dropdown pullRight id="Dropdown1">
+                    <NotificationDrawer.Dropdown pullRight id="Dropdown1">
                       <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
@@ -80,7 +80,7 @@ const basicNotifDrawerStory = stories => {
                       <MenuItem key="3" eventKey="3">
                         Delete
                       </MenuItem>
-                    </NotifDrawer.Dropdown>
+                    </NotificationDrawer.Dropdown>
                     <Icon className="pull-left" type="pf" name="ok" />
                     <Notification.Content>
                       <Notification.Message>
@@ -90,7 +90,7 @@ const basicNotifDrawerStory = stories => {
                     </Notification.Content>
                   </Notification>
                   <Notification>
-                    <NotifDrawer.Dropdown pullRight id="DropDown2">
+                    <NotificationDrawer.Dropdown pullRight id="DropDown2">
                       <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
@@ -100,7 +100,7 @@ const basicNotifDrawerStory = stories => {
                       <MenuItem key="3" eventKey="3">
                         Delete
                       </MenuItem>
-                    </NotifDrawer.Dropdown>
+                    </NotificationDrawer.Dropdown>
                     <Icon
                       className="pull-left"
                       type="pf"
@@ -115,7 +115,7 @@ const basicNotifDrawerStory = stories => {
                     </Notification.Content>
                   </Notification>
                   <Notification>
-                    <NotifDrawer.Dropdown pullRight id="Dropdown3">
+                    <NotificationDrawer.Dropdown pullRight id="Dropdown3">
                       <MenuItem key="1" eventKey="1" active>
                         Action
                       </MenuItem>
@@ -125,7 +125,7 @@ const basicNotifDrawerStory = stories => {
                       <MenuItem key="3" eventKey="3">
                         Delete
                       </MenuItem>
-                    </NotifDrawer.Dropdown>
+                    </NotificationDrawer.Dropdown>
                     <Icon
                       className="pull-left"
                       type="pf"
@@ -139,26 +139,26 @@ const basicNotifDrawerStory = stories => {
                     </Notification.Content>
                   </Notification>
                   <Notification loading />
-                </NotifDrawer.PanelBody>
-                <NotifDrawer.PanelAction>
-                  <NotifDrawer.PanelActionLink
+                </NotificationDrawer.PanelBody>
+                <NotificationDrawer.PanelAction>
+                  <NotificationDrawer.PanelActionLink
                     className="drawer-pf-action-link"
                     data-toggle="mark-all-read"
                   >
                     <Button bsStyle="link">Mark All Read</Button>
-                  </NotifDrawer.PanelActionLink>
-                  <NotifDrawer.PanelActionLink data-toggle="clear-all">
+                  </NotificationDrawer.PanelActionLink>
+                  <NotificationDrawer.PanelActionLink data-toggle="clear-all">
                     <Button bsStyle="link">
                       <Icon type="pf" name="close" />
                       Clear All
                     </Button>
-                  </NotifDrawer.PanelActionLink>
-                </NotifDrawer.PanelAction>
-              </NotifDrawer.PanelCollapse>
-            </NotifDrawer.Panel>
-            <NotifDrawer.Panel>
-              <NotifDrawer.PanelHeading>
-                <NotifDrawer.PanelTitle>
+                  </NotificationDrawer.PanelActionLink>
+                </NotificationDrawer.PanelAction>
+              </NotificationDrawer.PanelCollapse>
+            </NotificationDrawer.Panel>
+            <NotificationDrawer.Panel>
+              <NotificationDrawer.PanelHeading>
+                <NotificationDrawer.PanelTitle>
                   <a
                     onClick={handleClick}
                     aria-expanded="false"
@@ -166,14 +166,14 @@ const basicNotifDrawerStory = stories => {
                   >
                     Notification Tab 2
                   </a>
-                </NotifDrawer.PanelTitle>
-                <NotifDrawer.PanelCounter>
+                </NotificationDrawer.PanelTitle>
+                <NotificationDrawer.PanelCounter>
                   2 New Events
-                </NotifDrawer.PanelCounter>
-              </NotifDrawer.PanelHeading>
-            </NotifDrawer.Panel>
-          </NotifDrawer.Accordion>
-        </NotifDrawer>
+                </NotificationDrawer.PanelCounter>
+              </NotificationDrawer.PanelHeading>
+            </NotificationDrawer.Panel>
+          </NotificationDrawer.Accordion>
+        </NotificationDrawer>
       </nav>
     );
     return inlineTemplate({
@@ -186,4 +186,4 @@ const basicNotifDrawerStory = stories => {
   });
 };
 
-export default basicNotifDrawerStory;
+export default basicNotificationDrawerStory;

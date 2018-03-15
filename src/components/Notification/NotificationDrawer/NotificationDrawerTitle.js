@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '../../Icon';
 
-const NotifDrawerTitle = ({
+const NotificationDrawerTitle = ({
   expandable,
   onCloseClick,
   onExpandClick,
@@ -36,7 +36,7 @@ const NotifDrawerTitle = ({
     </div>
   );
 };
-NotifDrawerTitle.propTypes = {
+NotificationDrawerTitle.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node,
   /** Additional element css classes */
@@ -49,7 +49,7 @@ NotifDrawerTitle.propTypes = {
   /** is the Drawer expandable prop */
   expandable: PropTypes.bool
 };
-NotifDrawerTitle.defaultProps = {
+NotificationDrawerTitle.defaultProps = {
   className: '',
   title: 'Notifications',
   onCloseClick: null,
@@ -58,4 +58,4 @@ NotifDrawerTitle.defaultProps = {
   expandable: true
 };
 
-export default NotifDrawerTitle;
+export default NotificationDrawerTitle;

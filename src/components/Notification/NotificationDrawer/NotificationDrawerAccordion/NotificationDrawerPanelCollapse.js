@@ -2,33 +2,35 @@ import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotifDrawer = ({ hide, expanded, children, className, ...props }) => {
+const NotificationDrawerPanelCollapse = ({
+  collapseIn,
+  children,
+  className,
+  ...props
+}) => {
   const classes = ClassNames(
-    'drawer-pf drawer-pf-notifications-non-clickable',
-    { 'drawer-pf-expanded': expanded },
-    { hide },
+    'panel-collapse',
+    { 'collapse in': collapseIn },
     className
   );
+
   return (
     <div className={classes} {...props}>
       {children}
     </div>
   );
 };
-NotifDrawer.propTypes = {
+NotificationDrawerPanelCollapse.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node.isRequired,
   /** Additional element css classes */
   className: PropTypes.string,
-  /** Expanded bool */
-  expanded: PropTypes.bool,
-  /** Hide Bool */
-  hide: PropTypes.bool
+  /** collapseIn Bool */
+  collapseIn: PropTypes.bool
 };
-NotifDrawer.defaultProps = {
+NotificationDrawerPanelCollapse.defaultProps = {
   className: '',
-  expanded: false,
-  hide: false
+  collapseIn: false
 };
 
-export default NotifDrawer;
+export default NotificationDrawerPanelCollapse;

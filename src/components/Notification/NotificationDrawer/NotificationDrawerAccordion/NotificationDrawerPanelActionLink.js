@@ -2,8 +2,12 @@ import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotifDrawerPanelBody = ({ children, className, ...props }) => {
-  const classes = ClassNames('panel-body', className);
+const NotificationDrawerPanelActionLink = ({
+  children,
+  className,
+  ...props
+}) => {
+  const classes = ClassNames('drawer-pf-action-link', className);
 
   return (
     <div className={classes} {...props}>
@@ -11,14 +15,14 @@ const NotifDrawerPanelBody = ({ children, className, ...props }) => {
     </div>
   );
 };
-NotifDrawerPanelBody.propTypes = {
+NotificationDrawerPanelActionLink.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node.isRequired,
   /** Additional element css classes */
   className: PropTypes.string
 };
-NotifDrawerPanelBody.defaultProps = {
+NotificationDrawerPanelActionLink.defaultProps = {
   className: ''
 };
 
-export default NotifDrawerPanelBody;
+export default NotificationDrawerPanelActionLink;
