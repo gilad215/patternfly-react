@@ -39,7 +39,7 @@ exports[`Notification Message is working properly 1`] = `
 
 exports[`Notification is working properly 1`] = `
 <div
-  className="drawer-pf-notification"
+  className="drawer-pf-notification unread"
 >
   <div>
     Child

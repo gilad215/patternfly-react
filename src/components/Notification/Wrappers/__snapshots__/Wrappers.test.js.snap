@@ -8,13 +8,18 @@ exports[`DrawerWraper is working properly 1`] = `
     className="drawer-pf-title"
   >
     <a
-      className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
+      className="drawer-pf-toggle-expand"
       onClick={[MockFunction]}
     />
     <a
-      className="drawer-pf-close pficon pficon-close"
+      className="drawer-pf-close"
       onClick={[Function]}
-    />
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-close"
+      />
+    </a>
     <h3
       className="text-center"
     >
@@ -44,7 +49,7 @@ exports[`DrawerWraper is working properly 1`] = `
         <span
           className="panel-counter"
         >
-          1 New Event
+          2 New Events
         </span>
       </div>
       <div
@@ -66,7 +71,7 @@ exports[`DrawerWraper is working properly 1`] = `
                 aria-haspopup={true}
                 className="dropdown-toggle btn btn-link"
                 disabled={false}
-                id="4"
+                id={0}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
@@ -78,7 +83,7 @@ exports[`DrawerWraper is working properly 1`] = `
                 />
               </button>
               <ul
-                aria-labelledby="4"
+                aria-labelledby={0}
                 className="dropdown-menu-right dropdown-menu"
                 role="menu"
               >
@@ -95,7 +100,155 @@ exports[`DrawerWraper is working properly 1`] = `
                     role="menuitem"
                     tabIndex="-1"
                   >
-                    Dropdown Link
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-info pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2019
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2012-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={1}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={1}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-warning-triangle-o pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2019
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2019-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={2}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={2}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
                   </a>
                 </li>
               </ul>
@@ -111,7 +264,7 @@ exports[`DrawerWraper is working properly 1`] = `
                 className="drawer-pf-notification-message"
                 onClick={[Function]}
               >
-                Success Notification
+                Foreman Community Newsletter - January 2029
               </span>
               <div
                 className="drawer-pf-notification-info"
@@ -119,12 +272,86 @@ exports[`DrawerWraper is working properly 1`] = `
                 <span
                   className="date"
                 >
-                  3/31/16
+                  2018-3-13
                 </span>
                 <span
                   className="time"
                 >
-                  12:12:44 PM
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification unread"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={3}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={3}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-error-circle-o pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2029
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2018-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
                 </span>
               </div>
             </div>
@@ -188,7 +415,7 @@ exports[`PanelWraper is working properly 1`] = `
     <span
       className="panel-counter"
     >
-      1 New Event
+      2 New Events
     </span>
   </div>
   <div
@@ -210,7 +437,7 @@ exports[`PanelWraper is working properly 1`] = `
             aria-haspopup={true}
             className="dropdown-toggle btn btn-link"
             disabled={false}
-            id="4"
+            id={0}
             onClick={[Function]}
             onKeyDown={[Function]}
             role="button"
@@ -222,7 +449,7 @@ exports[`PanelWraper is working properly 1`] = `
             />
           </button>
           <ul
-            aria-labelledby="4"
+            aria-labelledby={0}
             className="dropdown-menu-right dropdown-menu"
             role="menu"
           >
@@ -239,7 +466,155 @@ exports[`PanelWraper is working properly 1`] = `
                 role="menuitem"
                 tabIndex="-1"
               >
-                Dropdown Link
+                Open
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span
+          aria-hidden="true"
+          className="pficon pficon-info pull-left"
+        />
+        <div
+          className="drawer-pf-notification-content"
+        >
+          <span
+            className="drawer-pf-notification-message"
+            onClick={[Function]}
+          >
+            Foreman Community Newsletter - January 2019
+          </span>
+          <div
+            className="drawer-pf-notification-info"
+          >
+            <span
+              className="date"
+            >
+              2012-3-13
+            </span>
+            <span
+              className="time"
+            >
+              14:30:37
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="drawer-pf-notification"
+      >
+        <div
+          className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-link"
+            disabled={false}
+            id={1}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            type="button"
+          >
+            <span
+              aria-hidden={true}
+              className="fa fa-ellipsis-v"
+            />
+          </button>
+          <ul
+            aria-labelledby={1}
+            className="dropdown-menu-right dropdown-menu"
+            role="menu"
+          >
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-0"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Open
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span
+          aria-hidden="true"
+          className="pficon pficon-warning-triangle-o pull-left"
+        />
+        <div
+          className="drawer-pf-notification-content"
+        >
+          <span
+            className="drawer-pf-notification-message"
+            onClick={[Function]}
+          >
+            Foreman Community Newsletter - January 2019
+          </span>
+          <div
+            className="drawer-pf-notification-info"
+          >
+            <span
+              className="date"
+            >
+              2019-3-13
+            </span>
+            <span
+              className="time"
+            >
+              14:30:37
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="drawer-pf-notification"
+      >
+        <div
+          className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-link"
+            disabled={false}
+            id={2}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            type="button"
+          >
+            <span
+              aria-hidden={true}
+              className="fa fa-ellipsis-v"
+            />
+          </button>
+          <ul
+            aria-labelledby={2}
+            className="dropdown-menu-right dropdown-menu"
+            role="menu"
+          >
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-0"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Open
               </a>
             </li>
           </ul>
@@ -255,7 +630,7 @@ exports[`PanelWraper is working properly 1`] = `
             className="drawer-pf-notification-message"
             onClick={[Function]}
           >
-            Success Notification
+            Foreman Community Newsletter - January 2029
           </span>
           <div
             className="drawer-pf-notification-info"
@@ -263,12 +638,86 @@ exports[`PanelWraper is working properly 1`] = `
             <span
               className="date"
             >
-              3/31/16
+              2018-3-13
             </span>
             <span
               className="time"
             >
-              12:12:44 PM
+              14:30:37
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="drawer-pf-notification unread"
+      >
+        <div
+          className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-link"
+            disabled={false}
+            id={3}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            type="button"
+          >
+            <span
+              aria-hidden={true}
+              className="fa fa-ellipsis-v"
+            />
+          </button>
+          <ul
+            aria-labelledby={3}
+            className="dropdown-menu-right dropdown-menu"
+            role="menu"
+          >
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-0"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Open
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span
+          aria-hidden="true"
+          className="pficon pficon-error-circle-o pull-left"
+        />
+        <div
+          className="drawer-pf-notification-content"
+        >
+          <span
+            className="drawer-pf-notification-message"
+            onClick={[Function]}
+          >
+            Foreman Community Newsletter - January 2029
+          </span>
+          <div
+            className="drawer-pf-notification-info"
+          >
+            <span
+              className="date"
+            >
+              2018-3-13
+            </span>
+            <span
+              className="time"
+            >
+              14:30:37
             </span>
           </div>
         </div>
@@ -328,13 +777,18 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
     className="drawer-pf-title"
   >
     <a
-      className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
+      className="drawer-pf-toggle-expand"
       onClick={[Function]}
     />
     <a
-      className="drawer-pf-close pficon pficon-close"
+      className="drawer-pf-close"
       onClick={[Function]}
-    />
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-close"
+      />
+    </a>
     <h3
       className="text-center"
     >
@@ -364,7 +818,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
         <span
           className="panel-counter"
         >
-          1 New Event
+          2 New Events
         </span>
       </div>
       <div
@@ -386,7 +840,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 aria-haspopup={true}
                 className="dropdown-toggle btn btn-link"
                 disabled={false}
-                id="4"
+                id={0}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
@@ -398,7 +852,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 />
               </button>
               <ul
-                aria-labelledby="4"
+                aria-labelledby={0}
                 className="dropdown-menu-right dropdown-menu"
                 role="menu"
               >
@@ -415,7 +869,155 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                     role="menuitem"
                     tabIndex="-1"
                   >
-                    Dropdown Link
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-info pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2019
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2012-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={1}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={1}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-warning-triangle-o pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2019
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2019-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={2}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={2}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
                   </a>
                 </li>
               </ul>
@@ -431,7 +1033,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 className="drawer-pf-notification-message"
                 onClick={[Function]}
               >
-                Success Notification
+                Foreman Community Newsletter - January 2029
               </span>
               <div
                 className="drawer-pf-notification-info"
@@ -439,12 +1041,86 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 <span
                   className="date"
                 >
-                  3/31/16
+                  2018-3-13
                 </span>
                 <span
                   className="time"
                 >
-                  12:12:44 PM
+                  14:30:37
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="drawer-pf-notification unread"
+          >
+            <div
+              className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            >
+              <button
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle btn btn-link"
+                disabled={false}
+                id={3}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                type="button"
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-ellipsis-v"
+                />
+              </button>
+              <ul
+                aria-labelledby={3}
+                className="dropdown-menu-right dropdown-menu"
+                role="menu"
+              >
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-0"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Open
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <span
+              aria-hidden="true"
+              className="pficon pficon-error-circle-o pull-left"
+            />
+            <div
+              className="drawer-pf-notification-content"
+            >
+              <span
+                className="drawer-pf-notification-message"
+                onClick={[Function]}
+              >
+                Foreman Community Newsletter - January 2029
+              </span>
+              <div
+                className="drawer-pf-notification-info"
+              >
+                <span
+                  className="date"
+                >
+                  2018-3-13
+                </span>
+                <span
+                  className="time"
+                >
+                  14:30:37
                 </span>
               </div>
             </div>
@@ -523,13 +1199,18 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
       className="drawer-pf-title"
     >
       <a
-        className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
+        className="drawer-pf-toggle-expand"
         onClick={[Function]}
       />
       <a
-        className="drawer-pf-close pficon pficon-close"
+        className="drawer-pf-close"
         onClick={[Function]}
-      />
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-close"
+        />
+      </a>
       <h3
         className="text-center"
       >
@@ -559,7 +1240,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
           <span
             className="panel-counter"
           >
-            1 New Event
+            2 New Events
           </span>
         </div>
         <div
@@ -581,7 +1262,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   aria-haspopup={true}
                   className="dropdown-toggle btn btn-link"
                   disabled={false}
-                  id="4"
+                  id={0}
                   onClick={[Function]}
                   onKeyDown={[Function]}
                   role="button"
@@ -593,7 +1274,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   />
                 </button>
                 <ul
-                  aria-labelledby="4"
+                  aria-labelledby={0}
                   className="dropdown-menu-right dropdown-menu"
                   role="menu"
                 >
@@ -610,7 +1291,155 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                       role="menuitem"
                       tabIndex="-1"
                     >
-                      Dropdown Link
+                      Open
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <span
+                aria-hidden="true"
+                className="pficon pficon-info pull-left"
+              />
+              <div
+                className="drawer-pf-notification-content"
+              >
+                <span
+                  className="drawer-pf-notification-message"
+                  onClick={[Function]}
+                >
+                  Foreman Community Newsletter - January 2019
+                </span>
+                <div
+                  className="drawer-pf-notification-info"
+                >
+                  <span
+                    className="date"
+                  >
+                    2012-3-13
+                  </span>
+                  <span
+                    className="time"
+                  >
+                    14:30:37
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="drawer-pf-notification"
+            >
+              <div
+                className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="dropdown-toggle btn btn-link"
+                  disabled={false}
+                  id={1}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  type="button"
+                >
+                  <span
+                    aria-hidden={true}
+                    className="fa fa-ellipsis-v"
+                  />
+                </button>
+                <ul
+                  aria-labelledby={1}
+                  className="dropdown-menu-right dropdown-menu"
+                  role="menu"
+                >
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Open
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <span
+                aria-hidden="true"
+                className="pficon pficon-warning-triangle-o pull-left"
+              />
+              <div
+                className="drawer-pf-notification-content"
+              >
+                <span
+                  className="drawer-pf-notification-message"
+                  onClick={[Function]}
+                >
+                  Foreman Community Newsletter - January 2019
+                </span>
+                <div
+                  className="drawer-pf-notification-info"
+                >
+                  <span
+                    className="date"
+                  >
+                    2019-3-13
+                  </span>
+                  <span
+                    className="time"
+                  >
+                    14:30:37
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="drawer-pf-notification"
+            >
+              <div
+                className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="dropdown-toggle btn btn-link"
+                  disabled={false}
+                  id={2}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  type="button"
+                >
+                  <span
+                    aria-hidden={true}
+                    className="fa fa-ellipsis-v"
+                  />
+                </button>
+                <ul
+                  aria-labelledby={2}
+                  className="dropdown-menu-right dropdown-menu"
+                  role="menu"
+                >
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Open
                     </a>
                   </li>
                 </ul>
@@ -626,7 +1455,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   className="drawer-pf-notification-message"
                   onClick={[Function]}
                 >
-                  Success Notification
+                  Foreman Community Newsletter - January 2029
                 </span>
                 <div
                   className="drawer-pf-notification-info"
@@ -634,12 +1463,86 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   <span
                     className="date"
                   >
-                    3/31/16
+                    2018-3-13
                   </span>
                   <span
                     className="time"
                   >
-                    12:12:44 PM
+                    14:30:37
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="drawer-pf-notification unread"
+            >
+              <div
+                className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="dropdown-toggle btn btn-link"
+                  disabled={false}
+                  id={3}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  type="button"
+                >
+                  <span
+                    aria-hidden={true}
+                    className="fa fa-ellipsis-v"
+                  />
+                </button>
+                <ul
+                  aria-labelledby={3}
+                  className="dropdown-menu-right dropdown-menu"
+                  role="menu"
+                >
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Open
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <span
+                aria-hidden="true"
+                className="pficon pficon-error-circle-o pull-left"
+              />
+              <div
+                className="drawer-pf-notification-content"
+              >
+                <span
+                  className="drawer-pf-notification-message"
+                  onClick={[Function]}
+                >
+                  Foreman Community Newsletter - January 2029
+                </span>
+                <div
+                  className="drawer-pf-notification-info"
+                >
+                  <span
+                    className="date"
+                  >
+                    2018-3-13
+                  </span>
+                  <span
+                    className="time"
+                  >
+                    14:30:37
                   </span>
                 </div>
               </div>
@@ -684,4 +1587,21 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
     </div>
   </div>
 </ul>
+`;
+
+exports[`getIconClass is working properly 1`] = `
+<div>
+  <span
+    aria-hidden="true"
+    className="pficon pficon-ok"
+  />
+  <span
+    aria-hidden="true"
+    className="pficon pficon-info"
+  />
+  <span
+    aria-hidden="true"
+    className="pficon pficon-warning-triangle-o"
+  />
+</div>
 `;

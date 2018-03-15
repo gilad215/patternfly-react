@@ -14,7 +14,6 @@ const handleClick = e => {
   action('some on click')();
 };
 const expandedBool = boolean('Expanded Drawer', false);
-const hideBool = false;
 const basicNotifDrawerStory = stories => {
   stories.addWithInfo('Notification Drawer', '', () => {
     const story = (
@@ -28,10 +27,7 @@ const basicNotifDrawerStory = stories => {
             </li>
           </ul>
         </nav>
-        <NotifDrawer
-          expanded={boolean('Expanded Drawer', false)}
-          hide={hideBool}
-        >
+        <NotifDrawer expanded={expandedBool}>
           <NotifDrawer.Title id="1" title="Notifications" />
           <NotifDrawer.Accordion style={{ overflowY: 'auto' }}>
             <NotifDrawer.Panel>
@@ -42,7 +38,7 @@ const basicNotifDrawerStory = stories => {
                   </a>
                 </NotifDrawer.PanelTitle>
                 <NotifDrawer.PanelCounter>
-                  4 New Events
+                  3 New Events
                 </NotifDrawer.PanelCounter>
               </NotifDrawer.PanelHeading>
               <NotifDrawer.PanelCollapse
@@ -53,7 +49,7 @@ const basicNotifDrawerStory = stories => {
                 <NotifDrawer.PanelBody
                   style={{ maxHeight: 550, overflowY: 'auto' }}
                 >
-                  <Notification expanded={expandedBool}>
+                  <Notification seen>
                     <NotifDrawer.Dropdown pullRight id="Dropdown1">
                       <MenuItem key="1" eventKey="1" active>
                         Action
@@ -73,7 +69,7 @@ const basicNotifDrawerStory = stories => {
                       <Notification.Info date="3/31/16" time="12:12:44 PM" />
                     </Notification.Content>
                   </Notification>
-                  <Notification unread expanded={expandedBool}>
+                  <Notification seen={false}>
                     <NotifDrawer.Dropdown pullRight id="Dropdown1">
                       <MenuItem key="1" eventKey="1" active>
                         Action
@@ -93,7 +89,7 @@ const basicNotifDrawerStory = stories => {
                       <Notification.Info date="3/31/16" time="12:12:44 PM" />
                     </Notification.Content>
                   </Notification>
-                  <Notification expanded={expandedBool}>
+                  <Notification>
                     <NotifDrawer.Dropdown pullRight id="DropDown2">
                       <MenuItem key="1" eventKey="1" active>
                         Action
@@ -118,7 +114,7 @@ const basicNotifDrawerStory = stories => {
                       <Notification.Info date="3/31/16" time="12:12:44 PM" />
                     </Notification.Content>
                   </Notification>
-                  <Notification expanded={expandedBool}>
+                  <Notification>
                     <NotifDrawer.Dropdown pullRight id="Dropdown3">
                       <MenuItem key="1" eventKey="1" active>
                         Action

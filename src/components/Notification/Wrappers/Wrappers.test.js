@@ -7,34 +7,85 @@ import StatefulToggleDrawerWrapper from './StatefulToggleDrawerWrapper';
 import { Icon } from '../../Icon';
 import getIconClass from './Icon.consts';
 
-const notification = [
+const p1Notifications = [
   {
-    nkey: '4',
-    expanded: false,
-    unread: true,
-    icon: {
-      name: 'ok',
-      type: 'pf'
-    },
-    text: 'Success Notification',
-    date: '3/31/16',
-    time: '12:12:44 PM',
-    dropdownid: '4',
-    dropdown: [
-      {
-        id: '4',
-        href: 'https://theforeman.org/blog',
-        title: 'Dropdown Link'
-      }
-    ]
+    id: 12,
+    seen: false,
+    level: 'info',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2012-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
+  },
+  {
+    id: 14,
+    seen: true,
+    level: 'warning',
+    text: 'Foreman Community Newsletter - January 2019',
+    created_at: '2019-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
+  },
+  {
+    id: 15,
+    seen: true,
+    level: 'ok',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
+  },
+  {
+    id: 16,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    group: 'Community',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   }
 ];
-
 const panel = [
   {
     panelkey: '1',
     panelName: 'Notification Tab 1',
-    notifs: notification,
+    notifs: p1Notifications,
     isExpanded: true
   }
 ];
@@ -43,7 +94,7 @@ test('PanelWraper is working properly', () => {
   const component = renderer.create(
     <PanelWraper
       panelkey={panel.panelkey}
-      notifications={notification}
+      notifications={p1Notifications}
       togglePanel={jest.fn()}
       onNotificationClick={jest.fn()}
       onMarkPanelAsRead={jest.fn()}
