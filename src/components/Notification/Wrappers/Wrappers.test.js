@@ -4,6 +4,8 @@ import PanelWraper from './PanelWrapper';
 import DrawerWrapper from './DrawerWrapper';
 import StatefulDrawerWrapper from './StatefulDrawerWrapper';
 import StatefulToggleDrawerWrapper from './StatefulToggleDrawerWrapper';
+import { Icon } from '../../Icon';
+import getIconClass from './Icon.consts';
 
 const notification = [
   {
@@ -89,6 +91,15 @@ test('StatefulToggleDrawerWrapper is working properly', () => {
       isDrawerOpen
       hasUnreadMessages
     />
+  );
+
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('getIconClass is working properly', () => {
+  const component = renderer.create(
+    <Icon type="pf" name={getIconClass('ok')} />
   );
 
   const tree = component.toJSON();

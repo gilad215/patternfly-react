@@ -1,6 +1,7 @@
 import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Icon } from '../../Icon';
 
 const NotifDrawerTitle = ({
   onCloseClick,
@@ -14,14 +15,10 @@ const NotifDrawerTitle = ({
 
   return (
     <div className={classes} {...props}>
-      <a
-        onClick={onExpandClick}
-        className="drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs"
-      />
-      <a
-        onClick={onCloseClick}
-        className="drawer-pf-close pficon pficon-close"
-      />
+      <a className="drawer-pf-toggle-expand" onClick={onExpandClick} />
+      <a className="drawer-pf-close" onClick={onCloseClick}>
+        <Icon name="close" />
+      </a>
       <h3 className="text-center">{title}</h3>
       {children}
     </div>
