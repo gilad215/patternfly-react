@@ -250,7 +250,7 @@ const panels = [
   }
 ];
 
-const StatefulNotifDrawerStory = stories => {
+const StatefulNotificationDrawerStory = stories => {
   stories.addWithInfo('Stateful Drawer Wrapper', '', () => {
     const story = (
       <nav className="navbar navbar-pf-vertical" style={{ minHeight: '60px' }}>
@@ -274,4 +274,4 @@ const StatefulNotifDrawerStory = stories => {
   });
 };
 
-export default StatefulNotifDrawerStory;
+export default StatefulNotificationDrawerStory;

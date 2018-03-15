@@ -117,10 +117,7 @@ const PanelWrapper = ({
             {notifications.length > 0 ? (
               [
                 showLoading
-                  ? [
-                      renderNotifications,
-                      <Notification key="loading" loading />
-                    ]
+                  ? [renderNotifications, <Notification type="loading" />]
                   : renderNotifications,
                 unreadCount > 0 ? renderClearReadButtons : renderClearButton
               ]

@@ -1,5 +1,9 @@
-export { default as basicNotifDrawerStory } from './BasicNotifDrawerStory';
-export { default as WrapperNotifDrawerStory } from './WrapperNotifDrawerStory';
 export {
-  default as StatefulNotifDrawerStory
-} from './StatefulNotifDrawerStory';
+  default as basicNotificationDrawerStory
+} from './basicNotificationDrawerStory';
+export {
+  default as WrapperNotificationDrawerStory
+} from './WrapperNotificationDrawerStory';
+export {
+  default as StatefulNotificationDrawerStory
+} from './StatefulNotificationDrawerStory';

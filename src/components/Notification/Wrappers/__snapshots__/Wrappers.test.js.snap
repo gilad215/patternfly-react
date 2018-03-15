@@ -723,7 +723,7 @@ exports[`PanelWraper is working properly 1`] = `
         </div>
       </div>
       <div
-        className="drawer-pf-notification text-center"
+        className="drawer-pf-loading text-center unread"
       >
         <div
           className="spinner spinner-xs spinner-inline"

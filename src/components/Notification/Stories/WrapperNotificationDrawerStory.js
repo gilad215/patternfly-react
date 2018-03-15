@@ -92,7 +92,7 @@ const panels = [
   }
 ];
 
-const WrapperNotifDrawerStory = stories => {
+const WrapperNotificationDrawerStory = stories => {
   stories.addWithInfo('Drawer Wrapper', '', () => {
     const story = (
       <nav className="navbar navbar-pf-vertical">
@@ -127,4 +127,4 @@ const WrapperNotifDrawerStory = stories => {
   });
 };
 
-export default WrapperNotifDrawerStory;
+export default WrapperNotificationDrawerStory;
