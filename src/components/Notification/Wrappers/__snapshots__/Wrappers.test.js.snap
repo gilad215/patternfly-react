@@ -130,12 +130,12 @@ exports[`DrawerWraper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2012-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -214,12 +214,12 @@ exports[`DrawerWraper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2019-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -298,12 +298,12 @@ exports[`DrawerWraper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2018-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -382,12 +382,12 @@ exports[`DrawerWraper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2018-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -532,12 +532,12 @@ exports[`PanelWraper is working properly 1`] = `
             <span
               class="date"
             >
-              2012-3-13
+              Invalid Date
             </span>
             <span
               class="time"
             >
-              14:30:37
+              Invalid Date
             </span>
           </div>
         </div>
@@ -616,12 +616,12 @@ exports[`PanelWraper is working properly 1`] = `
             <span
               class="date"
             >
-              2019-3-13
+              Invalid Date
             </span>
             <span
               class="time"
             >
-              14:30:37
+              Invalid Date
             </span>
           </div>
         </div>
@@ -700,12 +700,12 @@ exports[`PanelWraper is working properly 1`] = `
             <span
               class="date"
             >
-              2018-3-13
+              Invalid Date
             </span>
             <span
               class="time"
             >
-              14:30:37
+              Invalid Date
             </span>
           </div>
         </div>
@@ -784,12 +784,12 @@ exports[`PanelWraper is working properly 1`] = `
             <span
               class="date"
             >
-              2018-3-13
+              Invalid Date
             </span>
             <span
               class="time"
             >
-              14:30:37
+              Invalid Date
             </span>
           </div>
         </div>
@@ -967,12 +967,12 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2012-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -1051,12 +1051,12 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2019-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -1135,12 +1135,12 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2018-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -1219,12 +1219,12 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                 <span
                   class="date"
                 >
-                  2018-3-13
+                  Invalid Date
                 </span>
                 <span
                   class="time"
                 >
-                  14:30:37
+                  Invalid Date
                 </span>
               </div>
             </div>
@@ -1410,12 +1410,12 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   <span
                     class="date"
                   >
-                    2012-3-13
+                    Invalid Date
                   </span>
                   <span
                     class="time"
                   >
-                    14:30:37
+                    Invalid Date
                   </span>
                 </div>
               </div>
@@ -1494,12 +1494,12 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   <span
                     class="date"
                   >
-                    2019-3-13
+                    Invalid Date
                   </span>
                   <span
                     class="time"
                   >
-                    14:30:37
+                    Invalid Date
                   </span>
                 </div>
               </div>
@@ -1578,12 +1578,12 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   <span
                     class="date"
                   >
-                    2018-3-13
+                    Invalid Date
                   </span>
                   <span
                     class="time"
                   >
-                    14:30:37
+                    Invalid Date
                   </span>
                 </div>
               </div>
@@ -1662,12 +1662,12 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                   <span
                     class="date"
                   >
-                    2018-3-13
+                    Invalid Date
                   </span>
                   <span
                     class="time"
                   >
-                    14:30:37
+                    Invalid Date
                   </span>
                 </div>
               </div>
