@@ -929,7 +929,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
       aria-describedby="tooltip"
       aria-hidden="true"
       class="fa fa-bell fa-lg"
-      style="color: rgb(240, 240, 240); margin-top: 20px;"
+      style="color:rgb(240, 240, 240);margin-top:20px"
     />
   </button>
   <div
@@ -1025,6 +1025,18 @@ exports[`getIconClass is working properly 1`] = `
   <span
     aria-hidden="true"
     class="pficon pficon-warning-triangle-o"
+  />
+  <span
+    aria-hidden="true"
+    class="pficon pficon-close"
+  />
+  <span
+    aria-hidden="true"
+    class="pficon pficon-ok"
+  />
+  <span
+    aria-hidden="true"
+    class="pficon pficon-glyphicon glyphicon-question-sign"
   />
 </div>
 `;

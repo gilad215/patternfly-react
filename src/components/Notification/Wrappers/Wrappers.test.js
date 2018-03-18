@@ -127,7 +127,7 @@ test('DrawerWraper is working properly', () => {
 });
 
 test('StatefulDrawerWrapper is working properly', () => {
-  const updateFunc = () => {
+  const mockFunc = () => {
     const success = 'success';
     return success;
   };
@@ -135,12 +135,12 @@ test('StatefulDrawerWrapper is working properly', () => {
     <StatefulDrawerWrapper
       panels={panel}
       isExpanded
-      updateUnreadCount={updateFunc}
+      updateUnreadCount={mockFunc}
     />
   );
-  component.instance().onMarkPanelAsRead('1');
+  component.instance().onMarkPanelAsRead('1'); // panelKey
   component.instance().onMarkPanelAsClear('1');
-  component.instance().onNotificationClick('1', 12);
+  component.instance().onNotificationClick('1', 12); // (panelKey, notificationKey)
   component.instance().onNotificationHide('1', 12);
   component.instance().togglePanel('1');
   component.instance().toggleDrawerExpand();
@@ -150,13 +150,15 @@ test('StatefulDrawerWrapper is working properly', () => {
 });
 
 test('StatefulToggleDrawerWrapper is working properly', () => {
-  const component = mount(
+  const component = shallow(
     <StatefulToggleDrawerWrapper
       panels={panel}
       isDrawerOpen
       hasUnreadMessages
     />
   );
+  component.instance().toggleDrawer();
+  component.instance().updateUnreadCount(true);
 
   expect(component.render()).toMatchSnapshot();
 });
@@ -167,6 +169,9 @@ test('getIconClass is working properly', () => {
       <Icon type="pf" name={getIconClass('ok')} />
       <Icon type="pf" name={getIconClass('info')} />
       <Icon type="pf" name={getIconClass('warning')} />
+      <Icon type="pf" name={getIconClass('close')} />
+      <Icon type="pf" name={getIconClass('notice')} />
+      <Icon type="pf" name={getIconClass('question-sign')} />
     </div>
   );
 
