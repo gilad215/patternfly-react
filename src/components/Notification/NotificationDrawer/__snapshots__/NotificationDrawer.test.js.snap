@@ -2,7 +2,7 @@
 
 exports[`NotificationDrawer Accordion is working properly 1`] = `
 <div
-  className="panel-group"
+  class="panel-group"
   id="notification-drawer-accordion"
 >
   <div>
@@ -13,33 +13,27 @@ exports[`NotificationDrawer Accordion is working properly 1`] = `
 
 exports[`NotificationDrawer Dropdown is working properly 1`] = `
 <div
-  className="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+  class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
 >
   <button
-    aria-expanded={false}
-    aria-haspopup={true}
-    className="dropdown-toggle btn btn-link"
-    disabled={false}
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="dropdown-toggle btn btn-link"
     id="1"
-    onClick={[Function]}
-    onKeyDown={[Function]}
     role="button"
     type="button"
   >
     <span
-      aria-hidden={true}
-      className="fa fa-ellipsis-v"
+      aria-hidden="true"
+      class="fa fa-ellipsis-v"
     />
   </button>
   <ul
     aria-labelledby="1"
-    className="dropdown-menu-right dropdown-menu"
+    class="dropdown-menu-right dropdown-menu"
     role="menu"
   >
-    <div
-      onKeyDown={[Function]}
-      onSelect={[Function]}
-    >
+    <div>
       Child
     </div>
   </ul>
@@ -48,10 +42,10 @@ exports[`NotificationDrawer Dropdown is working properly 1`] = `
 
 exports[`NotificationDrawer Panel Action and Link is working properly 1`] = `
 <div
-  className="drawer-pf-action"
+  class="drawer-pf-action"
 >
   <div
-    className="drawer-pf-action-link"
+    class="drawer-pf-action-link"
   >
     <div>
       Child
@@ -62,7 +56,7 @@ exports[`NotificationDrawer Panel Action and Link is working properly 1`] = `
 
 exports[`NotificationDrawer Panel Body is working properly 1`] = `
 <div
-  className="panel-body"
+  class="panel-body"
 >
   <div>
     Child
@@ -72,7 +66,7 @@ exports[`NotificationDrawer Panel Body is working properly 1`] = `
 
 exports[`NotificationDrawer Panel Counter is working properly 1`] = `
 <span
-  className="panel-counter"
+  class="panel-counter"
 >
   <div>
     Child
@@ -82,7 +76,7 @@ exports[`NotificationDrawer Panel Counter is working properly 1`] = `
 
 exports[`NotificationDrawer Panel Heading is working properly 1`] = `
 <div
-  className="panel-heading"
+  class="panel-heading"
 >
   <div>
     Child
@@ -92,13 +86,13 @@ exports[`NotificationDrawer Panel Heading is working properly 1`] = `
 
 exports[`NotificationDrawer Panel Title is working properly 1`] = `
 <h4
-  className="panel-title"
+  class="panel-title"
 />
 `;
 
 exports[`NotificationDrawer Panel is working properly 1`] = `
 <div
-  className="panel panel-default"
+  class="panel panel-default"
 >
   <div>
     Child
@@ -108,23 +102,21 @@ exports[`NotificationDrawer Panel is working properly 1`] = `
 
 exports[`NotificationDrawer Title is working properly 1`] = `
 <div
-  className="drawer-pf-title"
+  class="drawer-pf-title"
 >
   <a
-    className="drawer-pf-toggle-expand"
-    onClick={null}
+    class="drawer-pf-toggle-expand"
   />
   <a
-    className="drawer-pf-close"
-    onClick={null}
+    class="drawer-pf-close"
   >
     <span
-      aria-hidden={true}
-      className="fa fa-close"
+      aria-hidden="true"
+      class="fa fa-close"
     />
   </a>
   <h3
-    className="text-center"
+    class="text-center"
   >
     Notifications
   </h3>
@@ -133,32 +125,21 @@ exports[`NotificationDrawer Title is working properly 1`] = `
 
 exports[`NotificationDrawer Toggle is working properly 1`] = `
 <button
-  className="btn btn-link"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={null}
-  onFocus={[Function]}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
+  class="btn btn-link"
   type="button"
 >
   <span
     aria-describedby="tooltip"
-    aria-hidden={true}
-    className="fa fa-bell fa-lg"
-    style={
-      Object {
-        "color": "rgb(240, 240, 240)",
-        "marginTop": "20px",
-      }
-    }
+    aria-hidden="true"
+    class="fa fa-bell fa-lg"
+    style="color: rgb(240, 240, 240); margin-top: 20px;"
   />
 </button>
 `;
 
 exports[`NotificationDrawer is working properly 1`] = `
 <div
-  className="drawer-pf drawer-pf-notifications-non-clickable"
+  class="drawer-pf drawer-pf-notifications-non-clickable"
 >
   <div>
     Child

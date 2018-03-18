@@ -2,7 +2,7 @@
 
 exports[`Notification Content is working properly 1`] = `
 <div
-  className="drawer-pf-notification-content"
+  class="drawer-pf-notification-content"
 >
   <div>
     Child
@@ -12,24 +12,20 @@ exports[`Notification Content is working properly 1`] = `
 
 exports[`Notification Info is working properly 1`] = `
 <div
-  className="drawer-pf-notification-info"
+  class="drawer-pf-notification-info"
 >
   <span
-    className="date"
-  >
-    
-  </span>
+    class="date"
+  />
   <span
-    className="time"
-  >
-    
-  </span>
+    class="time"
+  />
 </div>
 `;
 
 exports[`Notification Message is working properly 1`] = `
 <span
-  className="drawer-pf-notification-message"
+  class="drawer-pf-notification-message"
 >
   <div>
     Child
@@ -39,7 +35,7 @@ exports[`Notification Message is working properly 1`] = `
 
 exports[`Notification is working properly 1`] = `
 <div
-  className="drawer-pf-notification unread"
+  class="drawer-pf-notification unread"
 >
   <div>
     Child

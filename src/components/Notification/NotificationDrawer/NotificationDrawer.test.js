@@ -1,67 +1,61 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import { NotificationDrawer, NotificationDrawerToggle } from './index';
 
 test('NotificationDrawer is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer>
       <div>Child</div>
     </NotificationDrawer>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Title is working properly', () => {
-  const component = renderer.create(<NotificationDrawer.Title />);
+  const component = mount(<NotificationDrawer.Title />);
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Accordion is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.Accordion>
       <div>Child</div>
     </NotificationDrawer.Accordion>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Toggle is working properly', () => {
-  const component = renderer.create(<NotificationDrawerToggle />);
+  const component = mount(<NotificationDrawerToggle />);
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Dropdown is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.Dropdown id="1">
       <div>Child</div>
     </NotificationDrawer.Dropdown>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.Panel>
       <div>Child</div>
     </NotificationDrawer.Panel>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel Action and Link is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.PanelAction>
       <NotificationDrawer.PanelActionLink>
         <div>Child</div>
@@ -69,46 +63,41 @@ test('NotificationDrawer Panel Action and Link is working properly', () => {
     </NotificationDrawer.PanelAction>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel Body is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.PanelBody>
       <div>Child</div>
     </NotificationDrawer.PanelBody>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel Counter is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.PanelCounter>
       <div>Child</div>
     </NotificationDrawer.PanelCounter>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel Heading is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <NotificationDrawer.PanelHeading>
       <div>Child</div>
     </NotificationDrawer.PanelHeading>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('NotificationDrawer Panel Title is working properly', () => {
-  const component = renderer.create(<NotificationDrawer.PanelTitle />);
+  const component = mount(<NotificationDrawer.PanelTitle />);
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });

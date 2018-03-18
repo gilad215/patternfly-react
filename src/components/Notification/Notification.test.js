@@ -1,43 +1,36 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import { Notification } from './index';
 
 test('Notification is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <Notification>
       <div>Child</div>
     </Notification>
   );
-
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('Notification Content is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <Notification.Content>
       <div>Child</div>
     </Notification.Content>
   );
-
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('Notification Info is working properly', () => {
-  const component = renderer.create(<Notification.Info />);
+  const component = mount(<Notification.Info />);
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('Notification Message is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <Notification.Message>
       <div>Child</div>
     </Notification.Message>
   );
-
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });

@@ -12,10 +12,10 @@ const DrawerWrapper = ({
   isExpanded,
   togglePanel,
   onNotificationClick,
+  onNotificationHide,
   onMarkPanelAsRead,
   onMarkPanelAsClear,
-  onClickedLink,
-  onNotificationHide
+  onClickedLink
 }) => {
   const panels = notificationPanels.map((panel, i) => (
     <PanelWrapper

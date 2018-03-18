@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import PanelWraper from './PanelWrapper';
 import DrawerWrapper from './DrawerWrapper';
 import StatefulDrawerWrapper from './StatefulDrawerWrapper';
@@ -91,12 +91,15 @@ const panel = [
 ];
 
 test('PanelWraper is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <PanelWraper
       panelkey={panel.panelkey}
+      panelName="panelName"
       notifications={p1Notifications}
+      isExpanded
       togglePanel={jest.fn()}
       onNotificationClick={jest.fn()}
+      onNotificationHide={jest.fn()}
       onMarkPanelAsRead={jest.fn()}
       onClickedLink={jest.fn()}
       onMarkPanelAsClear={jest.fn()}
@@ -104,17 +107,18 @@ test('PanelWraper is working properly', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('DrawerWraper is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <DrawerWrapper
       notificationPanels={panel}
       toggleDrawerHide={jest.fn()}
       toggleDrawerExpand={jest.fn()}
       togglePanel={jest.fn()}
+      isExpandable
+      isExpanded
       onNotificationClick={jest.fn()}
       onNotificationHide={jest.fn()}
       onMarkPanelAsRead={jest.fn()}
@@ -123,21 +127,17 @@ test('DrawerWraper is working properly', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('StatefulDrawerWrapper is working properly', () => {
-  const component = renderer.create(
-    <StatefulDrawerWrapper panels={panel} isExpanded />
-  );
+  const component = mount(<StatefulDrawerWrapper panels={panel} isExpanded />);
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('StatefulToggleDrawerWrapper is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <StatefulToggleDrawerWrapper
       panels={panel}
       isDrawerOpen
@@ -145,12 +145,11 @@ test('StatefulToggleDrawerWrapper is working properly', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
 
 test('getIconClass is working properly', () => {
-  const component = renderer.create(
+  const component = mount(
     <div>
       <Icon type="pf" name={getIconClass('ok')} />
       <Icon type="pf" name={getIconClass('info')} />
@@ -158,6 +157,5 @@ test('getIconClass is working properly', () => {
     </div>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(component.render()).toMatchSnapshot();
 });
