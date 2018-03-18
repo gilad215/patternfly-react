@@ -866,7 +866,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
     id="notification-drawer-accordion"
   >
     <div
-      class="panel panel-default expanded"
+      class="panel panel-default"
     >
       <div
         class="panel-heading"
@@ -875,7 +875,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
           class="panel-title"
         >
           <a
-            class=""
+            class="collapsed"
           >
             Notification Tab 1
           </a>
@@ -883,381 +883,32 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
         <span
           class="panel-counter"
         >
-          2 New Events
+          0 New Events
         </span>
       </div>
       <div
-        class="panel-collapse collapse in collapse in"
+        class="panel-collapse collapse"
         id="1"
       >
         <div
           class="panel-body"
         >
           <div
-            class="drawer-pf-notification unread"
+            class="blank-slate-pf"
           >
             <div
-              class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-            >
-              <button
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="dropdown-toggle btn btn-link"
-                id="0"
-                role="button"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="fa fa-ellipsis-v"
-                />
-              </button>
-              <ul
-                aria-labelledby="0"
-                class="dropdown-menu-right dropdown-menu"
-                role="menu"
-              >
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-0"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Open
-                  </a>
-                </li>
-                <li
-                  class="divider"
-                  role="separator"
-                />
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-hide"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Hide this notification
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <span
-              aria-hidden="true"
-              class="pficon pficon-info pull-left"
-            />
-            <div
-              class="drawer-pf-notification-content"
+              class="blank-slate-pf-icon"
             >
               <span
-                class="drawer-pf-notification-message"
-              >
-                Foreman Community Newsletter - January 2019
-              </span>
-              <div
-                class="drawer-pf-notification-info"
-              >
-                <span
-                  class="date"
-                >
-                  Invalid Date
-                </span>
-                <span
-                  class="time"
-                >
-                  Invalid Date
-                </span>
-              </div>
+                aria-hidden="true"
+                class="pficon pficon-info"
+              />
             </div>
-          </div>
-          <div
-            class="drawer-pf-notification"
-          >
-            <div
-              class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+            <h4
+              class="h1 blank-slate-pf-title"
             >
-              <button
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="dropdown-toggle btn btn-link"
-                id="1"
-                role="button"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="fa fa-ellipsis-v"
-                />
-              </button>
-              <ul
-                aria-labelledby="1"
-                class="dropdown-menu-right dropdown-menu"
-                role="menu"
-              >
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-0"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Open
-                  </a>
-                </li>
-                <li
-                  class="divider"
-                  role="separator"
-                />
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-hide"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Hide this notification
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <span
-              aria-hidden="true"
-              class="pficon pficon-warning-triangle-o pull-left"
-            />
-            <div
-              class="drawer-pf-notification-content"
-            >
-              <span
-                class="drawer-pf-notification-message"
-              >
-                Foreman Community Newsletter - January 2019
-              </span>
-              <div
-                class="drawer-pf-notification-info"
-              >
-                <span
-                  class="date"
-                >
-                  Invalid Date
-                </span>
-                <span
-                  class="time"
-                >
-                  Invalid Date
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="drawer-pf-notification"
-          >
-            <div
-              class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-            >
-              <button
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="dropdown-toggle btn btn-link"
-                id="2"
-                role="button"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="fa fa-ellipsis-v"
-                />
-              </button>
-              <ul
-                aria-labelledby="2"
-                class="dropdown-menu-right dropdown-menu"
-                role="menu"
-              >
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-0"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Open
-                  </a>
-                </li>
-                <li
-                  class="divider"
-                  role="separator"
-                />
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-hide"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Hide this notification
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <span
-              aria-hidden="true"
-              class="pficon pficon-ok pull-left"
-            />
-            <div
-              class="drawer-pf-notification-content"
-            >
-              <span
-                class="drawer-pf-notification-message"
-              >
-                Foreman Community Newsletter - January 2029
-              </span>
-              <div
-                class="drawer-pf-notification-info"
-              >
-                <span
-                  class="date"
-                >
-                  Invalid Date
-                </span>
-                <span
-                  class="time"
-                >
-                  Invalid Date
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="drawer-pf-notification unread"
-          >
-            <div
-              class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-            >
-              <button
-                aria-expanded="false"
-                aria-haspopup="true"
-                class="dropdown-toggle btn btn-link"
-                id="3"
-                role="button"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="fa fa-ellipsis-v"
-                />
-              </button>
-              <ul
-                aria-labelledby="3"
-                class="dropdown-menu-right dropdown-menu"
-                role="menu"
-              >
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-0"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Open
-                  </a>
-                </li>
-                <li
-                  class="divider"
-                  role="separator"
-                />
-                <li
-                  class=""
-                  role="presentation"
-                >
-                  <a
-                    href="#"
-                    id="notification-kebab-hide"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Hide this notification
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <span
-              aria-hidden="true"
-              class="pficon pficon-error-circle-o pull-left"
-            />
-            <div
-              class="drawer-pf-notification-content"
-            >
-              <span
-                class="drawer-pf-notification-message"
-              >
-                Foreman Community Newsletter - January 2029
-              </span>
-              <div
-                class="drawer-pf-notification-info"
-              >
-                <span
-                  class="date"
-                >
-                  Invalid Date
-                </span>
-                <span
-                  class="time"
-                >
-                  Invalid Date
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="drawer-pf-action"
-          >
-            <div
-              class="drawer-pf-action-link drawer-pf-action-link"
-              data-toggle="mark-all-read"
-            >
-              <button
-                class="btn btn-link"
-                type="button"
-              >
-                Mark All Read
-              </button>
-            </div>
-            <div
-              class="drawer-pf-action-link"
-              data-toggle="clear-all"
-            >
-              <button
-                class="btn btn-link"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="pficon pficon-close"
-                />
-                Clear All
-              </button>
-            </div>
+              No Notifications Available
+            </h4>
           </div>
         </div>
       </div>
@@ -1309,7 +960,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
       id="notification-drawer-accordion"
     >
       <div
-        class="panel panel-default expanded"
+        class="panel panel-default"
       >
         <div
           class="panel-heading"
@@ -1318,7 +969,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
             class="panel-title"
           >
             <a
-              class=""
+              class="collapsed"
             >
               Notification Tab 1
             </a>
@@ -1326,381 +977,32 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
           <span
             class="panel-counter"
           >
-            2 New Events
+            0 New Events
           </span>
         </div>
         <div
-          class="panel-collapse collapse in collapse in"
+          class="panel-collapse collapse"
           id="1"
         >
           <div
             class="panel-body"
           >
             <div
-              class="drawer-pf-notification unread"
+              class="blank-slate-pf"
             >
               <div
-                class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-              >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="dropdown-toggle btn btn-link"
-                  id="0"
-                  role="button"
-                  type="button"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="fa fa-ellipsis-v"
-                  />
-                </button>
-                <ul
-                  aria-labelledby="0"
-                  class="dropdown-menu-right dropdown-menu"
-                  role="menu"
-                >
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-0"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Open
-                    </a>
-                  </li>
-                  <li
-                    class="divider"
-                    role="separator"
-                  />
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-hide"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Hide this notification
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pficon pficon-info pull-left"
-              />
-              <div
-                class="drawer-pf-notification-content"
+                class="blank-slate-pf-icon"
               >
                 <span
-                  class="drawer-pf-notification-message"
-                >
-                  Foreman Community Newsletter - January 2019
-                </span>
-                <div
-                  class="drawer-pf-notification-info"
-                >
-                  <span
-                    class="date"
-                  >
-                    Invalid Date
-                  </span>
-                  <span
-                    class="time"
-                  >
-                    Invalid Date
-                  </span>
-                </div>
+                  aria-hidden="true"
+                  class="pficon pficon-info"
+                />
               </div>
-            </div>
-            <div
-              class="drawer-pf-notification"
-            >
-              <div
-                class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
+              <h4
+                class="h1 blank-slate-pf-title"
               >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="dropdown-toggle btn btn-link"
-                  id="1"
-                  role="button"
-                  type="button"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="fa fa-ellipsis-v"
-                  />
-                </button>
-                <ul
-                  aria-labelledby="1"
-                  class="dropdown-menu-right dropdown-menu"
-                  role="menu"
-                >
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-0"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Open
-                    </a>
-                  </li>
-                  <li
-                    class="divider"
-                    role="separator"
-                  />
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-hide"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Hide this notification
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pficon pficon-warning-triangle-o pull-left"
-              />
-              <div
-                class="drawer-pf-notification-content"
-              >
-                <span
-                  class="drawer-pf-notification-message"
-                >
-                  Foreman Community Newsletter - January 2019
-                </span>
-                <div
-                  class="drawer-pf-notification-info"
-                >
-                  <span
-                    class="date"
-                  >
-                    Invalid Date
-                  </span>
-                  <span
-                    class="time"
-                  >
-                    Invalid Date
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="drawer-pf-notification"
-            >
-              <div
-                class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-              >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="dropdown-toggle btn btn-link"
-                  id="2"
-                  role="button"
-                  type="button"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="fa fa-ellipsis-v"
-                  />
-                </button>
-                <ul
-                  aria-labelledby="2"
-                  class="dropdown-menu-right dropdown-menu"
-                  role="menu"
-                >
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-0"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Open
-                    </a>
-                  </li>
-                  <li
-                    class="divider"
-                    role="separator"
-                  />
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-hide"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Hide this notification
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pficon pficon-ok pull-left"
-              />
-              <div
-                class="drawer-pf-notification-content"
-              >
-                <span
-                  class="drawer-pf-notification-message"
-                >
-                  Foreman Community Newsletter - January 2029
-                </span>
-                <div
-                  class="drawer-pf-notification-info"
-                >
-                  <span
-                    class="date"
-                  >
-                    Invalid Date
-                  </span>
-                  <span
-                    class="time"
-                  >
-                    Invalid Date
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="drawer-pf-notification unread"
-            >
-              <div
-                class="dropdown pull-right dropdown-kebab-pf dropdown btn-group"
-              >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="dropdown-toggle btn btn-link"
-                  id="3"
-                  role="button"
-                  type="button"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="fa fa-ellipsis-v"
-                  />
-                </button>
-                <ul
-                  aria-labelledby="3"
-                  class="dropdown-menu-right dropdown-menu"
-                  role="menu"
-                >
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-0"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Open
-                    </a>
-                  </li>
-                  <li
-                    class="divider"
-                    role="separator"
-                  />
-                  <li
-                    class=""
-                    role="presentation"
-                  >
-                    <a
-                      href="#"
-                      id="notification-kebab-hide"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Hide this notification
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <span
-                aria-hidden="true"
-                class="pficon pficon-error-circle-o pull-left"
-              />
-              <div
-                class="drawer-pf-notification-content"
-              >
-                <span
-                  class="drawer-pf-notification-message"
-                >
-                  Foreman Community Newsletter - January 2029
-                </span>
-                <div
-                  class="drawer-pf-notification-info"
-                >
-                  <span
-                    class="date"
-                  >
-                    Invalid Date
-                  </span>
-                  <span
-                    class="time"
-                  >
-                    Invalid Date
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="drawer-pf-action"
-            >
-              <div
-                class="drawer-pf-action-link drawer-pf-action-link"
-                data-toggle="mark-all-read"
-              >
-                <button
-                  class="btn btn-link"
-                  type="button"
-                >
-                  Mark All Read
-                </button>
-              </div>
-              <div
-                class="drawer-pf-action-link"
-                data-toggle="clear-all"
-              >
-                <button
-                  class="btn btn-link"
-                  type="button"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="pficon pficon-close"
-                  />
-                  Clear All
-                </button>
-              </div>
+                No Notifications Available
+              </h4>
             </div>
           </div>
         </div>

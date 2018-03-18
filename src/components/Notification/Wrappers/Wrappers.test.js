@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import PanelWraper from './PanelWrapper';
 import DrawerWrapper from './DrawerWrapper';
 import StatefulDrawerWrapper from './StatefulDrawerWrapper';
@@ -127,7 +127,24 @@ test('DrawerWraper is working properly', () => {
 });
 
 test('StatefulDrawerWrapper is working properly', () => {
-  const component = mount(<StatefulDrawerWrapper panels={panel} isExpanded />);
+  const updateFunc = () => {
+    const success = 'success';
+    return success;
+  };
+  const component = shallow(
+    <StatefulDrawerWrapper
+      panels={panel}
+      isExpanded
+      updateUnreadCount={updateFunc}
+    />
+  );
+  component.instance().onMarkPanelAsRead('1');
+  component.instance().onMarkPanelAsClear('1');
+  component.instance().onNotificationClick('1', 12);
+  component.instance().onNotificationHide('1', 12);
+  component.instance().togglePanel('1');
+  component.instance().toggleDrawerExpand();
+  component.instance().updateUnreadCount();
 
   expect(component.render()).toMatchSnapshot();
 });
