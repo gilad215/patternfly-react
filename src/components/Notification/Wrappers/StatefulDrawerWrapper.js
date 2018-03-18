@@ -19,7 +19,7 @@ class StatefulDrawerWrapper extends React.Component {
   onMarkPanelAsRead = panelkey => {
     const panels = this.state.panels.map(panel => {
       if (panel.panelkey === panelkey) {
-        panel.notifs.map(notification => {
+        panel.notifications.map(notification => {
           notification.seen = true;
           return notification;
         });
@@ -32,7 +32,7 @@ class StatefulDrawerWrapper extends React.Component {
 
   onMarkPanelAsClear = key => {
     const panels = this.state.panels.map(panel => {
-      if (panel.panelkey === key) panel.notifs = [];
+      if (panel.panelkey === key) panel.notifications = [];
       return panel;
     });
     this.setState({ panels });
@@ -42,10 +42,25 @@ class StatefulDrawerWrapper extends React.Component {
   onNotificationClick = (panelkey, nkey) => {
     const panels = this.state.panels.map(panel => {
       if (panel.panelkey === panelkey) {
-        panel.notifs.map(notification => {
+        panel.notifications.map(notification => {
           if (notification.id === nkey) notification.seen = true;
           return notification;
         });
+      }
+      return panel;
+    });
+    this.setState({ panels });
+    this.updateUnreadCount();
+  };
+
+  onNotificationHide = (panelkey, nkey) => {
+    const panels = this.state.panels.map(panel => {
+      if (panel.panelkey === panelkey) {
+        for (let i = 0; i < panel.notifications.length; i++) {
+          if (nkey === panel.notifications[i].id) {
+            panel.notifications.splice(i, 1);
+          }
+        }
       }
       return panel;
     });
@@ -71,8 +86,8 @@ class StatefulDrawerWrapper extends React.Component {
   updateUnreadCount = () => {
     let hasunread = false;
     for (let i = 0; i < this.state.panels.length; i++) {
-      for (let j = 0; j < this.state.panels[i].notifs.length; j++) {
-        if (this.state.panels[i].notifs[j].seen === false) {
+      for (let j = 0; j < this.state.panels[i].notifications.length; j++) {
+        if (this.state.panels[i].notifications[j].seen === false) {
           hasunread = true;
         }
       }
@@ -90,6 +105,7 @@ class StatefulDrawerWrapper extends React.Component {
         isExpandable={this.props.isExpandable}
         toggleDrawerHide={this.props.toggleDrawer}
         onNotificationClick={this.onNotificationClick}
+        onNotificationHide={this.onNotificationHide}
         onMarkPanelAsClear={this.onMarkPanelAsClear}
         onMarkPanelAsRead={this.onMarkPanelAsRead}
         onClickedLink={this.onClickLink}

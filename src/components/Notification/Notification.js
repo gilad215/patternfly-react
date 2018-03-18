@@ -16,7 +16,10 @@ const Notification = ({ type, children, seen, className, ...props }) => {
   return (
     <div className={classes} {...props}>
       {type === 'loading'
-        ? [<Spinner inline loading size="xs" />, ' Loading More']
+        ? [
+            <Spinner key="notification_spinner" inline loading size="xs" />,
+            ' Loading More'
+          ]
         : children}
     </div>
   );

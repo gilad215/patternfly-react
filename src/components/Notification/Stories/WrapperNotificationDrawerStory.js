@@ -81,13 +81,13 @@ const panels = [
   {
     panelkey: '1',
     panelName: 'Notification Tab 1',
-    notifs: foremanNotifications,
+    notifications: foremanNotifications,
     isExpanded: true
   },
   {
     panelkey: '2',
     panelName: 'Notification Tab 2',
-    notifs: foremanNotifications,
+    notifications: foremanNotifications,
     isExpanded: false
   }
 ];
@@ -111,6 +111,7 @@ const WrapperNotificationDrawerStory = stories => {
           toggleDrawerHide={closeClicked}
           togglePanel={expandClicked}
           onNotificationClick={notifClicked}
+          onNotificationHide={notifClicked}
           onMarkPanelAsRead={linkClicked}
           onMarkPanelAsClear={linkClicked}
           onClickedLink={linkClicked}

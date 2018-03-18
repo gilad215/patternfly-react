@@ -103,6 +103,28 @@ exports[`DrawerWraper is working properly 1`] = `
                     Open
                   </a>
                 </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
+                  </a>
+                </li>
               </ul>
             </div>
             <span
@@ -175,6 +197,28 @@ exports[`DrawerWraper is working properly 1`] = `
                     tabIndex="-1"
                   >
                     Open
+                  </a>
+                </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
                   </a>
                 </li>
               </ul>
@@ -251,6 +295,28 @@ exports[`DrawerWraper is working properly 1`] = `
                     Open
                   </a>
                 </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
+                  </a>
+                </li>
               </ul>
             </div>
             <span
@@ -323,6 +389,28 @@ exports[`DrawerWraper is working properly 1`] = `
                     tabIndex="-1"
                   >
                     Open
+                  </a>
+                </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
                   </a>
                 </li>
               </ul>
@@ -469,6 +557,28 @@ exports[`PanelWraper is working properly 1`] = `
                 Open
               </a>
             </li>
+            <li
+              className="divider"
+              onKeyDown={[Function]}
+              role="separator"
+              style={undefined}
+            />
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-hide"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Hide this notification
+              </a>
+            </li>
           </ul>
         </div>
         <span
@@ -541,6 +651,28 @@ exports[`PanelWraper is working properly 1`] = `
                 tabIndex="-1"
               >
                 Open
+              </a>
+            </li>
+            <li
+              className="divider"
+              onKeyDown={[Function]}
+              role="separator"
+              style={undefined}
+            />
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-hide"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Hide this notification
               </a>
             </li>
           </ul>
@@ -617,6 +749,28 @@ exports[`PanelWraper is working properly 1`] = `
                 Open
               </a>
             </li>
+            <li
+              className="divider"
+              onKeyDown={[Function]}
+              role="separator"
+              style={undefined}
+            />
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-hide"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Hide this notification
+              </a>
+            </li>
           </ul>
         </div>
         <span
@@ -689,6 +843,28 @@ exports[`PanelWraper is working properly 1`] = `
                 tabIndex="-1"
               >
                 Open
+              </a>
+            </li>
+            <li
+              className="divider"
+              onKeyDown={[Function]}
+              role="separator"
+              style={undefined}
+            />
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                id="notification-kebab-hide"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1"
+              >
+                Hide this notification
               </a>
             </li>
           </ul>
@@ -872,6 +1048,28 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                     Open
                   </a>
                 </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
+                  </a>
+                </li>
               </ul>
             </div>
             <span
@@ -944,6 +1142,28 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                     tabIndex="-1"
                   >
                     Open
+                  </a>
+                </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
                   </a>
                 </li>
               </ul>
@@ -1020,6 +1240,28 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                     Open
                   </a>
                 </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
+                  </a>
+                </li>
               </ul>
             </div>
             <span
@@ -1092,6 +1334,28 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
                     tabIndex="-1"
                   >
                     Open
+                  </a>
+                </li>
+                <li
+                  className="divider"
+                  onKeyDown={[Function]}
+                  role="separator"
+                  style={undefined}
+                />
+                <li
+                  className=""
+                  role="presentation"
+                  style={undefined}
+                >
+                  <a
+                    href="#"
+                    id="notification-kebab-hide"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="menuitem"
+                    tabIndex="-1"
+                  >
+                    Hide this notification
                   </a>
                 </li>
               </ul>
@@ -1294,6 +1558,28 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                       Open
                     </a>
                   </li>
+                  <li
+                    className="divider"
+                    onKeyDown={[Function]}
+                    role="separator"
+                    style={undefined}
+                  />
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-hide"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Hide this notification
+                    </a>
+                  </li>
                 </ul>
               </div>
               <span
@@ -1366,6 +1652,28 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                       tabIndex="-1"
                     >
                       Open
+                    </a>
+                  </li>
+                  <li
+                    className="divider"
+                    onKeyDown={[Function]}
+                    role="separator"
+                    style={undefined}
+                  />
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-hide"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Hide this notification
                     </a>
                   </li>
                 </ul>
@@ -1442,6 +1750,28 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                       Open
                     </a>
                   </li>
+                  <li
+                    className="divider"
+                    onKeyDown={[Function]}
+                    role="separator"
+                    style={undefined}
+                  />
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-hide"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Hide this notification
+                    </a>
+                  </li>
                 </ul>
               </div>
               <span
@@ -1514,6 +1844,28 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
                       tabIndex="-1"
                     >
                       Open
+                    </a>
+                  </li>
+                  <li
+                    className="divider"
+                    onKeyDown={[Function]}
+                    role="separator"
+                    style={undefined}
+                  />
+                  <li
+                    className=""
+                    role="presentation"
+                    style={undefined}
+                  >
+                    <a
+                      href="#"
+                      id="notification-kebab-hide"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="menuitem"
+                      tabIndex="-1"
+                    >
+                      Hide this notification
                     </a>
                   </li>
                 </ul>

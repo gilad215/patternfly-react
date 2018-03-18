@@ -85,7 +85,7 @@ const panel = [
   {
     panelkey: '1',
     panelName: 'Notification Tab 1',
-    notifs: p1Notifications,
+    notifications: p1Notifications,
     isExpanded: true
   }
 ];
@@ -116,6 +116,7 @@ test('DrawerWraper is working properly', () => {
       toggleDrawerExpand={jest.fn()}
       togglePanel={jest.fn()}
       onNotificationClick={jest.fn()}
+      onNotificationHide={jest.fn()}
       onMarkPanelAsRead={jest.fn()}
       onMarkPanelAsClear={jest.fn()}
       onClickedLink={jest.fn()}

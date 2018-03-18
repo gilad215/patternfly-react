@@ -18,6 +18,7 @@ const PanelWrapper = ({
   isExpanded,
   togglePanel,
   onNotificationClick,
+  onNotificationHide,
   onMarkPanelAsRead,
   onClickedLink,
   onMarkPanelAsClear,
@@ -44,6 +45,13 @@ const PanelWrapper = ({
             {link.title}
           </MenuItem>
         ))}
+        <MenuItem divider />
+        <MenuItem
+          id="notification-kebab-hide"
+          onClick={() => onNotificationHide(panelkey, notification.id)}
+        >
+          Hide this notification
+        </MenuItem>
       </NotificationDrawer.Dropdown>
       <Icon
         className="pull-left"
@@ -117,7 +125,10 @@ const PanelWrapper = ({
             {notifications.length > 0 ? (
               [
                 showLoading
-                  ? [renderNotifications, <Notification type="loading" />]
+                  ? [
+                      renderNotifications,
+                      <Notification key="loading" type="loading" />
+                    ]
                   : renderNotifications,
                 unreadCount > 0 ? renderClearReadButtons : renderClearButton
               ]
@@ -149,7 +160,10 @@ PanelWrapper.propTypes = {
   onMarkPanelAsRead: PropTypes.func,
   /** on Dropdown Link Click Func */
   onClickedLink: PropTypes.func,
+  /** Notification Hide func */
+  onNotificationHide: PropTypes.func,
   /** on MarkAllClear Click Func */
+
   onMarkPanelAsClear: PropTypes.func,
   /** on togglePanel Click Func */
   togglePanel: PropTypes.func,
@@ -165,6 +179,7 @@ PanelWrapper.defaultProps = {
   onNotificationClick: null,
   onMarkPanelAsRead: null,
   onClickedLink: null,
+  onNotificationHide: null,
   onMarkPanelAsClear: null,
   togglePanel: null,
   showLoading: false

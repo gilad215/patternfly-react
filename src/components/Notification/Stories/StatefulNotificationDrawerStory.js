@@ -61,7 +61,7 @@ const p1Notifications = [
   },
   {
     id: 16,
-    seen: false,
+    seen: true,
     level: 'error',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
@@ -221,6 +221,12 @@ const p3Notifications = [
             'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
           title: 'Open',
           external: true
+        },
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open again',
+          external: true
         }
       ]
     }
@@ -231,20 +237,20 @@ const panels = [
   {
     panelkey: '1',
     panelName: 'Notification Tab 1',
-    notifs: p1Notifications,
+    notifications: p1Notifications,
     isExpanded: true
   },
   {
     panelkey: '2',
     panelName: 'Notification Tab 2',
-    notifs: p2Notifications,
+    notifications: p2Notifications,
     isExpanded: false,
     showLoading: true
   },
   {
     panelkey: '3',
     panelName: 'Notification Tab 3',
-    notifs: p3Notifications,
+    notifications: p3Notifications,
     isExpanded: false,
     showLoading: true
   }
