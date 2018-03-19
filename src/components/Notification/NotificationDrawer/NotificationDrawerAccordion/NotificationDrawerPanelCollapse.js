@@ -2,17 +2,8 @@ import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotificationDrawerPanelCollapse = ({
-  collapseIn,
-  children,
-  className,
-  ...props
-}) => {
-  const classes = ClassNames(
-    'panel-collapse',
-    { 'collapse in': collapseIn },
-    className
-  );
+const NotificationDrawerPanelCollapse = ({ children, className, ...props }) => {
+  const classes = ClassNames('panel-collapse', className);
 
   return (
     <div className={classes} {...props}>
@@ -24,13 +15,10 @@ NotificationDrawerPanelCollapse.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node.isRequired,
   /** Additional element css classes */
-  className: PropTypes.string,
-  /** collapseIn Bool */
-  collapseIn: PropTypes.bool
+  className: PropTypes.string
 };
 NotificationDrawerPanelCollapse.defaultProps = {
-  className: '',
-  collapseIn: false
+  className: ''
 };
 
 export default NotificationDrawerPanelCollapse;

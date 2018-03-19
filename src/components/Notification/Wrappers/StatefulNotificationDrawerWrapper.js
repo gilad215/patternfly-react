@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DrawerWrapper from './DrawerWrapper';
+import NotificationDrawerWrapper from './NotificationDrawerWrapper';
 
-class StatefulDrawerWrapper extends React.Component {
+class StatefulNotificationDrawerWrapper extends React.Component {
   constructor(props) {
     super(props);
 
@@ -97,7 +97,7 @@ class StatefulDrawerWrapper extends React.Component {
 
   render() {
     return (
-      <DrawerWrapper
+      <NotificationDrawerWrapper
         notificationPanels={this.state.panels}
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
@@ -114,7 +114,7 @@ class StatefulDrawerWrapper extends React.Component {
   }
 }
 
-StatefulDrawerWrapper.propTypes = {
+StatefulNotificationDrawerWrapper.propTypes = {
   /** Notification Panels Array */
   panels: PropTypes.array,
   /** is Expanded Bool */
@@ -126,7 +126,7 @@ StatefulDrawerWrapper.propTypes = {
   /** is Drawer Expandable prop */
   isExpandable: PropTypes.bool
 };
-StatefulDrawerWrapper.defaultProps = {
+StatefulNotificationDrawerWrapper.defaultProps = {
   panels: null,
   isExpanded: false,
   updateUnreadCount: null,
@@ -134,4 +134,4 @@ StatefulDrawerWrapper.defaultProps = {
   isExpandable: true
 };
 
-export default StatefulDrawerWrapper;
+export default StatefulNotificationDrawerWrapper;

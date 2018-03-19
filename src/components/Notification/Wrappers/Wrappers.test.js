@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import PanelWraper from './PanelWrapper';
-import DrawerWrapper from './DrawerWrapper';
-import StatefulDrawerWrapper from './StatefulDrawerWrapper';
-import StatefulToggleDrawerWrapper from './StatefulToggleDrawerWrapper';
+import NotificationDrawerWrapper from './NotificationDrawerWrapper';
+import StatefulNotificationDrawerWrapper from './StatefulNotificationDrawerWrapper';
+import StatefulToggleNotificationDrawerWrapper from './StatefulToggleNotificationDrawerWrapper';
 import { Icon } from '../../Icon';
 import getIconClass from './Icon.consts';
 
@@ -108,7 +108,7 @@ test('PanelWraper is working properly', () => {
 
 test('DrawerWraper is working properly', () => {
   const component = mount(
-    <DrawerWrapper
+    <NotificationDrawerWrapper
       notificationPanels={panel}
       toggleDrawerHide={jest.fn()}
       toggleDrawerExpand={jest.fn()}
@@ -126,13 +126,13 @@ test('DrawerWraper is working properly', () => {
   expect(component.render()).toMatchSnapshot();
 });
 
-test('StatefulDrawerWrapper is working properly', () => {
+test('StatefulNotificationDrawerWrapper is working properly', () => {
   const mockFunc = () => {
     const success = 'success';
     return success;
   };
   const component = shallow(
-    <StatefulDrawerWrapper
+    <StatefulNotificationDrawerWrapper
       panels={panel}
       isExpanded
       updateUnreadCount={mockFunc}
@@ -149,9 +149,9 @@ test('StatefulDrawerWrapper is working properly', () => {
   expect(component.render()).toMatchSnapshot();
 });
 
-test('StatefulToggleDrawerWrapper is working properly', () => {
+test('StatefulToggleNotificationDrawerWrapper is working properly', () => {
   const component = shallow(
-    <StatefulToggleDrawerWrapper
+    <StatefulToggleNotificationDrawerWrapper
       panels={panel}
       isDrawerOpen
       hasUnreadMessages

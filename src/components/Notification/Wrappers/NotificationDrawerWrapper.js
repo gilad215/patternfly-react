@@ -4,7 +4,7 @@ import { NotificationDrawer } from '../NotificationDrawer/index';
 import PanelWrapper from './PanelWrapper';
 import { EmptyState, EmptyStateIcon, EmptyStateTitle } from '../../EmptyState';
 
-const DrawerWrapper = ({
+const NotificationDrawerWrapper = ({
   notificationPanels,
   toggleDrawerHide,
   toggleDrawerExpand,
@@ -55,7 +55,7 @@ const DrawerWrapper = ({
   );
 };
 
-DrawerWrapper.propTypes = {
+NotificationDrawerWrapper.propTypes = {
   /** toggleDrawer Hide/Expand func */
   toggleDrawerExpand: PropTypes.func,
   toggleDrawerHide: PropTypes.func,
@@ -63,23 +63,23 @@ DrawerWrapper.propTypes = {
   notificationPanels: PropTypes.array,
   /** is Expanded Bool */
   isExpanded: PropTypes.bool,
-  /** on Notification Click Func */
+  /** function(panelkey, notificationkey) on Notification Click */
   onNotificationClick: PropTypes.func,
-  /** on MarkAllRead Click Func */
+  /** on function(panelkey) Panel Read All Click */
   onMarkPanelAsRead: PropTypes.func,
-  /** on Dropdown Link Click Func */
+  /** function(url) on Dropdown Link Click */
   onClickedLink: PropTypes.func,
-  /** on Notification Click Func */
+  /** function(panelkey, notificationkey) on Notification Hide Click */
   onNotificationHide: PropTypes.func,
-  /** on MarkAllClear Click Func */
+  /** function(panelkey) Panel Clear All Click */
   onMarkPanelAsClear: PropTypes.func,
-  /** on togglePanel Click Func */
+  /** function() togglePanel Click */
   togglePanel: PropTypes.func,
-  /** is Drawer Expandable */
+  /** show Loading notification Bool */
   isExpandable: PropTypes.bool
 };
 
-DrawerWrapper.defaultProps = {
+NotificationDrawerWrapper.defaultProps = {
   notificationPanels: null,
   toggleDrawerHide: null,
   toggleDrawerExpand: null,
@@ -93,4 +93,4 @@ DrawerWrapper.defaultProps = {
   isExpandable: true
 };
 
-export default DrawerWrapper;
+export default NotificationDrawerWrapper;

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NotificationDrawerToggle } from '../NotificationDrawer/index';
-import StatefulDrawerWrapper from './StatefulDrawerWrapper';
+import StatefulNotificationDrawerWrapper from './StatefulNotificationDrawerWrapper';
 
-class StatefulToggleDrawerWrapper extends React.Component {
+class StatefulToggleNotificationDrawerWrapper extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,7 +33,7 @@ class StatefulToggleDrawerWrapper extends React.Component {
           onClick={this.toggleDrawer}
         />
         {this.state.isDrawerOpen && (
-          <StatefulDrawerWrapper
+          <StatefulNotificationDrawerWrapper
             panels={this.state.panels}
             isDrawerOpen
             isExpandable={this.props.isExpandable}
@@ -47,7 +47,7 @@ class StatefulToggleDrawerWrapper extends React.Component {
   }
 }
 
-StatefulToggleDrawerWrapper.propTypes = {
+StatefulToggleNotificationDrawerWrapper.propTypes = {
   /** Notification Panels Array */
   panels: PropTypes.array,
   /** Is Drawer Open Bool */
@@ -57,11 +57,11 @@ StatefulToggleDrawerWrapper.propTypes = {
   /** is Drawer Expandable */
   isExpandable: PropTypes.bool
 };
-StatefulToggleDrawerWrapper.defaultProps = {
+StatefulToggleNotificationDrawerWrapper.defaultProps = {
   panels: null,
   isDrawerOpen: false,
   hasUnreadMessages: false,
   isExpandable: true
 };
 
-export default StatefulToggleDrawerWrapper;
+export default StatefulToggleNotificationDrawerWrapper;

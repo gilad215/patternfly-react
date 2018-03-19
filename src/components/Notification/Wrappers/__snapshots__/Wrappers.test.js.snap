@@ -2,7 +2,7 @@
 
 exports[`DrawerWraper is working properly 1`] = `
 <div
-  class="drawer-pf drawer-pf-notifications-non-clickable drawer-pf-expanded"
+  class="drawer-pf drawer-pf-notifications drawer-pf-expanded"
 >
   <div
     class="drawer-pf-title"
@@ -50,7 +50,7 @@ exports[`DrawerWraper is working properly 1`] = `
         </span>
       </div>
       <div
-        class="panel-collapse collapse in collapse in"
+        class="panel-collapse collapse in"
         id="1"
       >
         <div
@@ -452,7 +452,7 @@ exports[`PanelWraper is working properly 1`] = `
     </span>
   </div>
   <div
-    class="panel-collapse collapse in collapse in"
+    class="panel-collapse collapse in"
     id="1"
   >
     <div
@@ -837,9 +837,9 @@ exports[`PanelWraper is working properly 1`] = `
 </div>
 `;
 
-exports[`StatefulDrawerWrapper is working properly 1`] = `
+exports[`StatefulNotificationDrawerWrapper is working properly 1`] = `
 <div
-  class="drawer-pf drawer-pf-notifications-non-clickable drawer-pf-expanded"
+  class="drawer-pf drawer-pf-notifications drawer-pf-expanded"
 >
   <div
     class="drawer-pf-title"
@@ -917,7 +917,7 @@ exports[`StatefulDrawerWrapper is working properly 1`] = `
 </div>
 `;
 
-exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
+exports[`StatefulToggleNotificationDrawerWrapper is working properly 1`] = `
 <ul
   class="nav navbar-nav navbar-right navbar-iconic"
 >
@@ -933,7 +933,7 @@ exports[`StatefulToggleDrawerWrapper is working properly 1`] = `
     />
   </button>
   <div
-    class="drawer-pf drawer-pf-notifications-non-clickable"
+    class="drawer-pf drawer-pf-notifications"
   >
     <div
       class="drawer-pf-title"

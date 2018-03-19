@@ -14,20 +14,11 @@ const NotificationDrawerTitle = ({
 }) => {
   const classes = ClassNames('drawer-pf-title', className);
 
-  if (expandable) {
-    return (
-      <div className={classes} {...props}>
-        <a className="drawer-pf-toggle-expand" onClick={onExpandClick} />
-        <a className="drawer-pf-close" onClick={onCloseClick}>
-          <Icon name="close" />
-        </a>
-        <h3 className="text-center">{title}</h3>
-        {children}
-      </div>
-    );
-  }
   return (
     <div className={classes} {...props}>
+      {expandable && (
+        <a className="drawer-pf-toggle-expand" onClick={onExpandClick} />
+      )}
       <a className="drawer-pf-close" onClick={onCloseClick}>
         <Icon name="close" />
       </a>
@@ -36,6 +27,7 @@ const NotificationDrawerTitle = ({
     </div>
   );
 };
+
 NotificationDrawerTitle.propTypes = {
   /** Child node - contents of the element */
   children: PropTypes.node,

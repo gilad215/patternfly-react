@@ -67,11 +67,7 @@ exports[`NotificationDrawer Panel Body is working properly 1`] = `
 exports[`NotificationDrawer Panel Counter is working properly 1`] = `
 <span
   class="panel-counter"
->
-  <div>
-    Child
-  </div>
-</span>
+/>
 `;
 
 exports[`NotificationDrawer Panel Heading is working properly 1`] = `
@@ -139,7 +135,7 @@ exports[`NotificationDrawer Toggle is working properly 1`] = `
 
 exports[`NotificationDrawer is working properly 1`] = `
 <div
-  class="drawer-pf drawer-pf-notifications-non-clickable"
+  class="drawer-pf drawer-pf-notifications"
 >
   <div>
     Child

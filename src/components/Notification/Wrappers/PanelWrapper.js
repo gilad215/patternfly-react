@@ -34,7 +34,11 @@ const PanelWrapper = ({
   };
 
   const renderNotifications = notifications.map((notification, i) => (
-    <Notification key={i} seen={notification.seen}>
+    <Notification
+      key={i}
+      seen={notification.seen}
+      onClick={() => onNotificationClick(panelkey, notification.id)}
+    >
       <NotificationDrawer.Dropdown pullRight id={i}>
         {notification.actions.links.map((link, j) => (
           <MenuItem
@@ -59,11 +63,7 @@ const PanelWrapper = ({
         name={getIconClass(notification.level)}
       />
       <Notification.Content>
-        <Notification.Message
-          onClick={() => onNotificationClick(panelkey, notification.id)}
-        >
-          {notification.text}
-        </Notification.Message>
+        <Notification.Message>{notification.text}</Notification.Message>
         <Notification.Info
           date={new Date(notification.created_at).toLocaleDateString()}
           time={new Date(notification.created_at).toLocaleTimeString()}
@@ -111,16 +111,10 @@ const PanelWrapper = ({
         <NotificationDrawer.PanelTitle>
           <a className={isExpanded ? '' : 'collapsed'}>{panelName}</a>
         </NotificationDrawer.PanelTitle>
-        <NotificationDrawer.PanelCounter>
-          {getUnread()}
-        </NotificationDrawer.PanelCounter>
+        <NotificationDrawer.PanelCounter text={getUnread()} />
       </NotificationDrawer.PanelHeading>
       <Collapse in={isExpanded}>
-        <NotificationDrawer.PanelCollapse
-          aria-expanded="true"
-          id={panelkey}
-          collapseIn={isExpanded}
-        >
+        <NotificationDrawer.PanelCollapse id={panelkey}>
           <NotificationDrawer.PanelBody>
             {notifications.length > 0 ? (
               [
@@ -154,18 +148,17 @@ PanelWrapper.propTypes = {
   notifications: PropTypes.array,
   /** is Expanded Bool */
   isExpanded: PropTypes.bool,
-  /** on Notification Click Func */
+  /** function(panelkey, notificationkey) on Notification Click */
   onNotificationClick: PropTypes.func,
-  /** on MarkAllRead Click Func */
+  /** on function(panelkey) Panel Read All Click */
   onMarkPanelAsRead: PropTypes.func,
-  /** on Dropdown Link Click Func */
+  /** function(url) on Dropdown Link Click */
   onClickedLink: PropTypes.func,
-  /** Notification Hide func */
+  /** function(panelkey, notificationkey) on Notification Hide Click */
   onNotificationHide: PropTypes.func,
-  /** on MarkAllClear Click Func */
-
+  /** function(panelkey) Panel Clear All Click */
   onMarkPanelAsClear: PropTypes.func,
-  /** on togglePanel Click Func */
+  /** function() togglePanel Click */
   togglePanel: PropTypes.func,
   /** show Loading notification Bool */
   showLoading: PropTypes.bool

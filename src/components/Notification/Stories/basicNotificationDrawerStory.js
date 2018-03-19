@@ -37,15 +37,9 @@ const basicNotificationDrawerStory = stories => {
                     Notification Tab 1
                   </a>
                 </NotificationDrawer.PanelTitle>
-                <NotificationDrawer.PanelCounter>
-                  3 New Events
-                </NotificationDrawer.PanelCounter>
+                <NotificationDrawer.PanelCounter text="3 New Events" />
               </NotificationDrawer.PanelHeading>
-              <NotificationDrawer.PanelCollapse
-                collapseIn
-                aria-expanded="true"
-                id="fixedCollapseOne"
-              >
+              <NotificationDrawer.PanelCollapse id="fixedCollapseOne">
                 <NotificationDrawer.PanelBody
                   style={{ maxHeight: 550, overflowY: 'auto' }}
                 >
@@ -166,9 +160,7 @@ const basicNotificationDrawerStory = stories => {
                     Notification Tab 2
                   </a>
                 </NotificationDrawer.PanelTitle>
-                <NotificationDrawer.PanelCounter>
-                  2 New Events
-                </NotificationDrawer.PanelCounter>
+                <NotificationDrawer.PanelCounter text="1 New Event" />
               </NotificationDrawer.PanelHeading>
             </NotificationDrawer.Panel>
           </NotificationDrawer.Accordion>

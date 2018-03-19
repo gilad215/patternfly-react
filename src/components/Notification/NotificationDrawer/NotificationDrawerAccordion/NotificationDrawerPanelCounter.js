@@ -2,23 +2,24 @@ import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotificationDrawerPanelCounter = ({ children, className, ...props }) => {
+const NotificationDrawerPanelCounter = ({ text, className, ...props }) => {
   const classes = ClassNames('panel-counter', className);
 
   return (
     <span className={classes} {...props}>
-      {children}
+      {text}
     </span>
   );
 };
 NotificationDrawerPanelCounter.propTypes = {
-  /** Child node - contents of the element */
-  children: PropTypes.node.isRequired,
+  /** Text prop for the Panel Counter */
+  text: PropTypes.string,
   /** Additional element css classes */
   className: PropTypes.string
 };
 NotificationDrawerPanelCounter.defaultProps = {
-  className: ''
+  className: '',
+  text: ''
 };
 
 export default NotificationDrawerPanelCounter;

@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
-import DrawerWrapper from '../Wrappers/DrawerWrapper';
+import NotificationDrawerWrapper from '../Wrappers/NotificationDrawerWrapper';
 
 const handleClick = e => {
   e.preventDefault();
@@ -105,7 +105,7 @@ const WrapperNotificationDrawerStory = stories => {
             </li>
           </ul>
         </nav>
-        <DrawerWrapper
+        <NotificationDrawerWrapper
           notificationPanels={panels}
           toggleDrawerExpand={expandClicked}
           toggleDrawerHide={closeClicked}
