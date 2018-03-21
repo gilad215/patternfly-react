@@ -28,7 +28,6 @@ const foremanNotifications = [
     level: 'info',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2012-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -46,7 +45,6 @@ const foremanNotifications = [
     level: 'warning',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2019-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -64,7 +62,6 @@ const foremanNotifications = [
     level: 'ok',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {

@@ -5,11 +5,12 @@ import PanelWrapper from './PanelWrapper';
 import { EmptyState, EmptyStateIcon, EmptyStateTitle } from '../../EmptyState';
 
 const NotificationDrawerWrapper = ({
-  notificationPanels,
+  panels,
   toggleDrawerHide,
   toggleDrawerExpand,
   isExpandable,
   isExpanded,
+  expandedPanel,
   togglePanel,
   onNotificationClick,
   onNotificationHide,
@@ -17,7 +18,7 @@ const NotificationDrawerWrapper = ({
   onMarkPanelAsClear,
   onClickedLink
 }) => {
-  const panels = notificationPanels.map((panel, i) => (
+  const notificationPanels = panels.map((panel, i) => (
     <PanelWrapper
       key={i}
       panelName={panel.panelName}
@@ -25,7 +26,7 @@ const NotificationDrawerWrapper = ({
       onClickedLink={onClickedLink}
       notifications={panel.notifications}
       togglePanel={togglePanel}
-      isExpanded={panel.isExpanded}
+      isExpanded={expandedPanel === panel.panelkey}
       onNotificationClick={onNotificationClick}
       onNotificationHide={onNotificationHide}
       onMarkPanelAsRead={onMarkPanelAsRead}
@@ -49,7 +50,9 @@ const NotificationDrawerWrapper = ({
         onExpandClick={toggleDrawerExpand}
       />
       <NotificationDrawer.Accordion>
-        {panels.length === 0 ? noNotificationsMessage : panels}
+        {notificationPanels.length === 0
+          ? noNotificationsMessage
+          : notificationPanels}
       </NotificationDrawer.Accordion>
     </NotificationDrawer>
   );
@@ -60,7 +63,7 @@ NotificationDrawerWrapper.propTypes = {
   toggleDrawerExpand: PropTypes.func,
   toggleDrawerHide: PropTypes.func,
   /** Notification Panels Array */
-  notificationPanels: PropTypes.array,
+  panels: PropTypes.array,
   /** is Expanded Bool */
   isExpanded: PropTypes.bool,
   /** function(panelkey, notificationkey) on Notification Click */
@@ -76,11 +79,13 @@ NotificationDrawerWrapper.propTypes = {
   /** function() togglePanel Click */
   togglePanel: PropTypes.func,
   /** show Loading notification Bool */
-  isExpandable: PropTypes.bool
+  isExpandable: PropTypes.bool,
+  /** expanded Panel */
+  expandedPanel: PropTypes.string
 };
 
 NotificationDrawerWrapper.defaultProps = {
-  notificationPanels: null,
+  panels: null,
   toggleDrawerHide: null,
   toggleDrawerExpand: null,
   togglePanel: null,
@@ -90,7 +95,8 @@ NotificationDrawerWrapper.defaultProps = {
   onClickedLink: null,
   onNotificationHide: null,
   onMarkPanelAsClear: null,
-  isExpandable: true
+  isExpandable: true,
+  expandedPanel: null
 };
 
 export default NotificationDrawerWrapper;

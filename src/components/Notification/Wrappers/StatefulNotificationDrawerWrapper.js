@@ -8,7 +8,8 @@ class StatefulNotificationDrawerWrapper extends React.Component {
 
     this.state = {
       panels: props.panels,
-      isExpanded: props.isExpanded
+      isExpanded: props.isExpanded,
+      expandedPanel: props.expandedPanel
     };
   }
 
@@ -69,12 +70,9 @@ class StatefulNotificationDrawerWrapper extends React.Component {
   };
 
   togglePanel = key => {
-    const panels = this.state.panels.map(panel => {
-      if (panel.panelkey === key) panel.isExpanded = !panel.isExpanded;
-      else panel.isExpanded = false;
-      return panel;
-    });
-    this.setState({ panels });
+    if (this.state.expandedPanel === key)
+      this.setState({ expandedPanel: '-1' });
+    else this.setState({ expandedPanel: key });
   };
 
   toggleDrawerExpand = () => {
@@ -98,11 +96,12 @@ class StatefulNotificationDrawerWrapper extends React.Component {
   render() {
     return (
       <NotificationDrawerWrapper
-        notificationPanels={this.state.panels}
+        panels={this.state.panels}
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
         isExpanded={this.state.isExpanded}
         isExpandable={this.props.isExpandable}
+        expandedPanel={this.state.expandedPanel}
         toggleDrawerHide={this.props.toggleDrawer}
         onNotificationClick={this.onNotificationClick}
         onNotificationHide={this.onNotificationHide}
@@ -124,14 +123,17 @@ StatefulNotificationDrawerWrapper.propTypes = {
   /** toggleDrawer Func */
   toggleDrawer: PropTypes.func,
   /** is Drawer Expandable prop */
-  isExpandable: PropTypes.bool
+  isExpandable: PropTypes.bool,
+  /** expanded Panel */
+  expandedPanel: PropTypes.string
 };
 StatefulNotificationDrawerWrapper.defaultProps = {
   panels: null,
   isExpanded: false,
   updateUnreadCount: null,
   toggleDrawer: null,
-  isExpandable: true
+  isExpandable: true,
+  expandedPanel: null
 };
 
 export default StatefulNotificationDrawerWrapper;

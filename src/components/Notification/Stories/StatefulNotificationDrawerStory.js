@@ -11,7 +11,6 @@ const p1Notifications = [
     level: 'info',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2012-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -29,7 +28,6 @@ const p1Notifications = [
     level: 'warning',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2019-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -47,7 +45,6 @@ const p1Notifications = [
     level: 'ok',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -65,7 +62,6 @@ const p1Notifications = [
     level: 'error',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -85,7 +81,6 @@ const p2Notifications = [
     level: 'info',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2012-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -103,7 +98,6 @@ const p2Notifications = [
     level: 'warning',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2019-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -121,7 +115,6 @@ const p2Notifications = [
     level: 'ok',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -139,7 +132,6 @@ const p2Notifications = [
     level: 'error',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -159,7 +151,6 @@ const p3Notifications = [
     level: 'info',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2012-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -177,7 +168,7 @@ const p3Notifications = [
     level: 'warning',
     text: 'Foreman Community Newsletter - January 2019',
     created_at: '2019-03-13T12:30:37.988Z',
-    group: 'Community',
+
     actions: {
       links: [
         {
@@ -195,7 +186,6 @@ const p3Notifications = [
     level: 'ok',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
@@ -213,7 +203,6 @@ const p3Notifications = [
     level: 'error',
     text: 'Foreman Community Newsletter - January 2029',
     created_at: '2018-03-13T12:30:37.988Z',
-    group: 'Community',
     actions: {
       links: [
         {
