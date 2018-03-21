@@ -15,13 +15,8 @@ const NotificationDrawerToggle = ({ hasUnreadMessages, onClick }) => {
       id="notifications-toggle-icon"
       overlay={tooltip}
     >
-      <Button onClick={onClick} bsStyle="link">
-        <Icon
-          name={iconName}
-          style={{ color: 'rgb(240, 240, 240)', marginTop: '20px' }}
-          aria-describedby="tooltip"
-          size="lg"
-        />
+      <Button onClick={onClick} bsStyle="link" className="nav-item-iconic">
+        <Icon name={iconName} aria-describedby="tooltip" />
       </Button>
     </OverlayTrigger>
   );

@@ -29,7 +29,7 @@ exports[`DrawerWraper is working properly 1`] = `
     id="notification-drawer-accordion"
   >
     <div
-      class="panel panel-default expanded"
+      class="panel panel-default"
     >
       <div
         class="panel-heading"
@@ -38,7 +38,7 @@ exports[`DrawerWraper is working properly 1`] = `
           class="panel-title"
         >
           <a
-            class=""
+            class="collapsed"
           >
             Notification Tab 1
           </a>
@@ -50,7 +50,7 @@ exports[`DrawerWraper is working properly 1`] = `
         </span>
       </div>
       <div
-        class="panel-collapse collapse in"
+        class="panel-collapse collapse"
         id="1"
       >
         <div
@@ -922,14 +922,13 @@ exports[`StatefulToggleNotificationDrawerWrapper is working properly 1`] = `
   class="nav navbar-nav navbar-right navbar-iconic"
 >
   <button
-    class="btn btn-link"
+    class="nav-item-iconic btn btn-link"
     type="button"
   >
     <span
       aria-describedby="tooltip"
       aria-hidden="true"
-      class="fa fa-bell fa-lg"
-      style="color:rgb(240, 240, 240);margin-top:20px"
+      class="fa fa-bell"
     />
   </button>
   <div

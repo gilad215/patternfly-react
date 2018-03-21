@@ -121,14 +121,13 @@ exports[`NotificationDrawer Title is working properly 1`] = `
 
 exports[`NotificationDrawer Toggle is working properly 1`] = `
 <button
-  class="btn btn-link"
+  class="nav-item-iconic btn btn-link"
   type="button"
 >
   <span
     aria-describedby="tooltip"
     aria-hidden="true"
-    class="fa fa-bell fa-lg"
-    style="color: rgb(240, 240, 240); margin-top: 20px;"
+    class="fa fa-bell"
   />
 </button>
 `;

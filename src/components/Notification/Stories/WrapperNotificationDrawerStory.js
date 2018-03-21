@@ -103,7 +103,8 @@ const WrapperNotificationDrawerStory = stories => {
           </ul>
         </nav>
         <NotificationDrawerWrapper
-          notificationPanels={panels}
+          panels={panels}
+          expandedPanel="1"
           toggleDrawerExpand={expandClicked}
           toggleDrawerHide={closeClicked}
           togglePanel={expandClicked}
