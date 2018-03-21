@@ -60,7 +60,10 @@ const basicNotificationDrawerStory = stories => {
                       <Notification.Message>
                         Info Notification
                       </Notification.Message>
-                      <Notification.Info date="3/31/16" time="12:12:44 PM" />
+                      <Notification.Info
+                        leftText="3/31/16"
+                        rightText="12:12:44 PM"
+                      />
                     </Notification.Content>
                   </Notification>
                   <Notification seen={false}>
@@ -80,7 +83,10 @@ const basicNotificationDrawerStory = stories => {
                       <Notification.Message>
                         Unread Notification
                       </Notification.Message>
-                      <Notification.Info date="3/31/16" time="12:12:44 PM" />
+                      <Notification.Info
+                        leftText="3/31/16"
+                        rightText="12:12:44 PM"
+                      />
                     </Notification.Content>
                   </Notification>
                   <Notification>
@@ -105,7 +111,10 @@ const basicNotificationDrawerStory = stories => {
                         Another Event Notification that is really long to see
                         how it reacts on smaller screens sizes.
                       </Notification.Message>
-                      <Notification.Info date="3/31/16" time="12:12:44 PM" />
+                      <Notification.Info
+                        leftText="3/31/16"
+                        rightText="12:12:44 PM"
+                      />
                     </Notification.Content>
                   </Notification>
                   <Notification>
@@ -129,7 +138,10 @@ const basicNotificationDrawerStory = stories => {
                       <Notification.Message>
                         Error Notification
                       </Notification.Message>
-                      <Notification.Info date="3/31/16" time="12:12:44 PM" />
+                      <Notification.Info
+                        leftText="3/31/16"
+                        rightText="12:12:44 PM"
+                      />
                     </Notification.Content>
                   </Notification>
                 </NotificationDrawer.PanelBody>

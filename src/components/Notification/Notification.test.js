@@ -26,6 +26,18 @@ test('Notification Info is working properly', () => {
   expect(component.render()).toMatchSnapshot();
 });
 
+test('Notification Info Right is working properly', () => {
+  const component = mount(<Notification.InfoRight text="right" />);
+
+  expect(component.render()).toMatchSnapshot();
+});
+
+test('Notification Info Left is working properly', () => {
+  const component = mount(<Notification.InfoLeft text="left" />);
+
+  expect(component.render()).toMatchSnapshot();
+});
+
 test('Notification Message is working properly', () => {
   const component = mount(
     <Notification.Message>

@@ -1,28 +1,30 @@
 import ClassNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
+import NotificationInfoRight from './NotificationInfoRight';
+import NotificationInfoLeft from './NotificationInfoLeft';
 
-const NotificationInfo = ({ time, date, className, ...props }) => {
+const NotificationInfo = ({ rightText, leftText, className, ...props }) => {
   const classes = ClassNames('drawer-pf-notification-info', className);
 
   return (
     <div className={classes}>
-      <span className="date">{date}</span>
-      <span className="time">{time}</span>
+      <NotificationInfoLeft text={leftText} />
+      <NotificationInfoRight text={rightText} />
     </div>
   );
 };
 NotificationInfo.propTypes = {
   /** Additional element css classes */
   className: PropTypes.string,
-  /** Date and Time Strings */
-  date: PropTypes.string,
-  time: PropTypes.string
+  /** leftText and rightText Strings */
+  leftText: PropTypes.string,
+  rightText: PropTypes.string
 };
 NotificationInfo.defaultProps = {
   className: '',
-  date: '',
-  time: ''
+  leftText: '',
+  rightText: ''
 };
 
 export default NotificationInfo;

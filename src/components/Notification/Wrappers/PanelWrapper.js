@@ -65,8 +65,8 @@ const PanelWrapper = ({
       <Notification.Content>
         <Notification.Message>{notification.text}</Notification.Message>
         <Notification.Info
-          date={new Date(notification.created_at).toLocaleDateString()}
-          time={new Date(notification.created_at).toLocaleTimeString()}
+          leftText={new Date(notification.created_at).toLocaleDateString()}
+          rightText={new Date(notification.created_at).toLocaleTimeString()}
         />
       </Notification.Content>
     </Notification>
@@ -104,6 +104,12 @@ const PanelWrapper = ({
       </NotificationDrawer.PanelActionLink>
     </NotificationDrawer.PanelAction>
   );
+  const noNotificationsMessage = (
+    <EmptyState>
+      <EmptyStateIcon name="info" />
+      <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
+    </EmptyState>
+  );
 
   return (
     <NotificationDrawer.Panel className={classes}>
@@ -116,22 +122,17 @@ const PanelWrapper = ({
       <Collapse in={isExpanded}>
         <NotificationDrawer.PanelCollapse id={panelkey}>
           <NotificationDrawer.PanelBody>
-            {notifications.length > 0 ? (
-              [
-                showLoading
-                  ? [
-                      renderNotifications,
-                      <Notification key="loading" type="loading" />
-                    ]
-                  : renderNotifications,
-                unreadCount > 0 ? renderClearReadButtons : renderClearButton
-              ]
-            ) : (
-              <EmptyState>
-                <EmptyStateIcon name="info" />
-                <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
-              </EmptyState>
-            )}
+            {notifications.length > 0
+              ? [
+                  showLoading
+                    ? [
+                        renderNotifications,
+                        <Notification key="loading" type="loading" />
+                      ]
+                    : renderNotifications,
+                  unreadCount > 0 ? renderClearReadButtons : renderClearButton
+                ]
+              : noNotificationsMessage}
           </NotificationDrawer.PanelBody>
         </NotificationDrawer.PanelCollapse>
       </Collapse>
