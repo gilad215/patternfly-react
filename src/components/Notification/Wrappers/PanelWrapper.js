@@ -85,15 +85,13 @@ const PanelWrapper = ({
       <NotificationDrawer.PanelActionLink
         className="drawer-pf-action-link"
         data-toggle="mark-all-read"
-        onClick={() => onMarkPanelAsRead(panelkey)}
       >
-        <Button bsStyle="link">Mark All Read</Button>
+        <Button bsStyle="link" onClick={() => onMarkPanelAsRead(panelkey)}>
+          Mark All Read
+        </Button>
       </NotificationDrawer.PanelActionLink>
-      <NotificationDrawer.PanelActionLink
-        data-toggle="clear-all"
-        onClick={() => onMarkPanelAsClear(panelkey)}
-      >
-        <Button bsStyle="link">
+      <NotificationDrawer.PanelActionLink data-toggle="clear-all">
+        <Button bsStyle="link" onClick={() => onMarkPanelAsClear(panelkey)}>
           <Icon type="pf" name="close" />
           Clear All
         </Button>
@@ -102,11 +100,8 @@ const PanelWrapper = ({
   );
   const renderClearButton = (
     <NotificationDrawer.PanelAction key={panelkey}>
-      <NotificationDrawer.PanelActionLink
-        data-toggle="clear-all"
-        onClick={() => onMarkPanelAsClear(panelkey)}
-      >
-        <Button bsStyle="link">
+      <NotificationDrawer.PanelActionLink data-toggle="clear-all">
+        <Button bsStyle="link" onClick={() => onMarkPanelAsClear(panelkey)}>
           <Icon type="pf" name="close" />
           Clear All
         </Button>
