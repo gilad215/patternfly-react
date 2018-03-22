@@ -46,7 +46,7 @@ exports[`DrawerWraper is working properly 1`] = `
         <span
           class="panel-counter"
         >
-          2 New Events
+          2 Unread Events
         </span>
       </div>
       <div
@@ -392,35 +392,35 @@ exports[`DrawerWraper is working properly 1`] = `
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="drawer-pf-action"
+        >
           <div
-            class="drawer-pf-action"
+            class="drawer-pf-action-link drawer-pf-action-link"
+            data-toggle="mark-all-read"
           >
-            <div
-              class="drawer-pf-action-link drawer-pf-action-link"
-              data-toggle="mark-all-read"
+            <button
+              class="btn btn-link"
+              type="button"
             >
-              <button
-                class="btn btn-link"
-                type="button"
-              >
-                Mark All Read
-              </button>
-            </div>
-            <div
-              class="drawer-pf-action-link"
-              data-toggle="clear-all"
+              Mark All Read
+            </button>
+          </div>
+          <div
+            class="drawer-pf-action-link"
+            data-toggle="clear-all"
+          >
+            <button
+              class="btn btn-link"
+              type="button"
             >
-              <button
-                class="btn btn-link"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="pficon pficon-close"
-                />
-                Clear All
-              </button>
-            </div>
+              <span
+                aria-hidden="true"
+                class="pficon pficon-close"
+              />
+              Clear All
+            </button>
           </div>
         </div>
       </div>
@@ -448,7 +448,7 @@ exports[`PanelWraper is working properly 1`] = `
     <span
       class="panel-counter"
     >
-      2 New Events
+      2 Unread Events
     </span>
   </div>
   <div
@@ -802,35 +802,35 @@ exports[`PanelWraper is working properly 1`] = `
         />
          Loading More
       </div>
+    </div>
+    <div
+      class="drawer-pf-action"
+    >
       <div
-        class="drawer-pf-action"
+        class="drawer-pf-action-link drawer-pf-action-link"
+        data-toggle="mark-all-read"
       >
-        <div
-          class="drawer-pf-action-link drawer-pf-action-link"
-          data-toggle="mark-all-read"
+        <button
+          class="btn btn-link"
+          type="button"
         >
-          <button
-            class="btn btn-link"
-            type="button"
-          >
-            Mark All Read
-          </button>
-        </div>
-        <div
-          class="drawer-pf-action-link"
-          data-toggle="clear-all"
+          Mark All Read
+        </button>
+      </div>
+      <div
+        class="drawer-pf-action-link"
+        data-toggle="clear-all"
+      >
+        <button
+          class="btn btn-link"
+          type="button"
         >
-          <button
-            class="btn btn-link"
-            type="button"
-          >
-            <span
-              aria-hidden="true"
-              class="pficon pficon-close"
-            />
-            Clear All
-          </button>
-        </div>
+          <span
+            aria-hidden="true"
+            class="pficon pficon-close"
+          />
+          Clear All
+        </button>
       </div>
     </div>
   </div>
@@ -883,7 +883,7 @@ exports[`StatefulNotificationDrawerWrapper is working properly 1`] = `
         <span
           class="panel-counter"
         >
-          0 New Events
+          0 Unread Events
         </span>
       </div>
       <div
@@ -976,7 +976,7 @@ exports[`StatefulToggleNotificationDrawerWrapper is working properly 1`] = `
           <span
             class="panel-counter"
           >
-            0 New Events
+            0 Unread Events
           </span>
         </div>
         <div
