@@ -82,37 +82,25 @@ const PanelWrapper = ({
 
   const renderClearReadButtons = (
     <NotificationDrawer.PanelAction key={panelkey}>
-      <NotificationDrawer.PanelActionLink
-        className="drawer-pf-action-link"
-        data-toggle="mark-all-read"
-        onClick={() => onMarkPanelAsRead(panelkey)}
-      >
-        <Button bsStyle="link">Mark All Read</Button>
-      </NotificationDrawer.PanelActionLink>
-      <NotificationDrawer.PanelActionLink
-        data-toggle="clear-all"
-        onClick={() => onMarkPanelAsClear(panelkey)}
-      >
-        <Button bsStyle="link">
+      {unreadCount > 0 && (
+        <NotificationDrawer.PanelActionLink
+          className="drawer-pf-action-link"
+          data-toggle="mark-all-read"
+        >
+          <Button bsStyle="link" onClick={() => onMarkPanelAsRead(panelkey)}>
+            Mark All Read
+          </Button>
+        </NotificationDrawer.PanelActionLink>
+      )}
+      <NotificationDrawer.PanelActionLink data-toggle="clear-all">
+        <Button bsStyle="link" onClick={() => onMarkPanelAsClear(panelkey)}>
           <Icon type="pf" name="close" />
           Clear All
         </Button>
       </NotificationDrawer.PanelActionLink>
     </NotificationDrawer.PanelAction>
   );
-  const renderClearButton = (
-    <NotificationDrawer.PanelAction key={panelkey}>
-      <NotificationDrawer.PanelActionLink
-        data-toggle="clear-all"
-        onClick={() => onMarkPanelAsClear(panelkey)}
-      >
-        <Button bsStyle="link">
-          <Icon type="pf" name="close" />
-          Clear All
-        </Button>
-      </NotificationDrawer.PanelActionLink>
-    </NotificationDrawer.PanelAction>
-  );
+
   const noNotificationsMessage = (
     <NotificationDrawer.PanelBody key="noNotifications">
       <EmptyState>
@@ -133,10 +121,7 @@ const PanelWrapper = ({
       <Collapse in={isExpanded}>
         <NotificationDrawer.PanelCollapse id={panelkey}>
           {notifications.length > 0
-            ? [
-                renderNotifications,
-                unreadCount > 0 ? renderClearReadButtons : renderClearButton
-              ]
+            ? [renderNotifications, renderClearReadButtons]
             : noNotificationsMessage}
         </NotificationDrawer.PanelCollapse>
       </Collapse>
