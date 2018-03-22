@@ -23,5 +23,6 @@ NotificationDrawer.PanelHeading = NotificationDrawerPanelHeading;
 NotificationDrawer.PanelTitle = NotificationDrawerPanelTitle;
 NotificationDrawer.Title = NotificationDrawerTitle;
 NotificationDrawer.Dropdown = NotificationDrawerDropDown;
+NotificationDrawer.Toggle = NotificationDrawerToggle;
 
-export { NotificationDrawer, NotificationDrawerToggle };
+export { NotificationDrawer };

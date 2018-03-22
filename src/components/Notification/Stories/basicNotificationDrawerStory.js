@@ -20,16 +20,15 @@ const basicNotificationDrawerStory = stories => {
       <nav className="navbar navbar-pf-vertical">
         <nav className="collapse navbar-collapse">
           <ul className="nav navbar-nav navbar-right navbar-iconic">
-            <li className="drawer-pf-trigger open">
-              <a className="nav-item-iconic" onClick={handleClick}>
-                <span className="fa fa-bell" title="Notifications" />
-              </a>
-            </li>
+            <NotificationDrawer.Toggle
+              hasUnreadMessages
+              onClick={handleClick}
+            />
           </ul>
         </nav>
         <NotificationDrawer expanded={expandedBool}>
           <NotificationDrawer.Title id="1" title="Notifications" />
-          <NotificationDrawer.Accordion style={{ overflowY: 'auto' }}>
+          <NotificationDrawer.Accordion>
             <NotificationDrawer.Panel>
               <NotificationDrawer.PanelHeading>
                 <NotificationDrawer.PanelTitle>
@@ -37,12 +36,10 @@ const basicNotificationDrawerStory = stories => {
                     Notification Tab 1
                   </a>
                 </NotificationDrawer.PanelTitle>
-                <NotificationDrawer.PanelCounter text="3 New Events" />
+                <NotificationDrawer.PanelCounter text="3 Unread Events" />
               </NotificationDrawer.PanelHeading>
               <NotificationDrawer.PanelCollapse id="fixedCollapseOne">
-                <NotificationDrawer.PanelBody
-                  style={{ maxHeight: 550, overflowY: 'auto' }}
-                >
+                <NotificationDrawer.PanelBody>
                   <Notification seen>
                     <NotificationDrawer.Dropdown pullRight id="Dropdown1">
                       <MenuItem key="1" eventKey="1" active>
@@ -172,7 +169,7 @@ const basicNotificationDrawerStory = stories => {
                     Notification Tab 2
                   </a>
                 </NotificationDrawer.PanelTitle>
-                <NotificationDrawer.PanelCounter text="1 New Event" />
+                <NotificationDrawer.PanelCounter text="1 Unread Event" />
               </NotificationDrawer.PanelHeading>
             </NotificationDrawer.Panel>
           </NotificationDrawer.Accordion>

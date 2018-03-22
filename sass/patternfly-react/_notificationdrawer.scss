@@ -1,0 +1,8 @@
+.drawer-pf {
+  .panel-group {
+    .panel-body {
+      max-height: 364px; // 4 notifications before scrolling
+      overflow-y: auto;
+    }
+  }
+}

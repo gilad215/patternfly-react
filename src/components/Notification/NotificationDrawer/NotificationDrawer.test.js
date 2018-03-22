@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { NotificationDrawer, NotificationDrawerToggle } from './index';
+import { NotificationDrawer } from './index';
 
 test('NotificationDrawer is working properly', () => {
   const component = mount(
@@ -29,7 +29,7 @@ test('NotificationDrawer Accordion is working properly', () => {
 });
 
 test('NotificationDrawer Toggle is working properly', () => {
-  const component = mount(<NotificationDrawerToggle />);
+  const component = mount(<NotificationDrawer.Toggle />);
 
   expect(component.render()).toMatchSnapshot();
 });

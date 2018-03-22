@@ -29,11 +29,11 @@ const PanelWrapper = ({
     .length;
 
   const getUnread = () => {
-    if (unreadCount !== 1) return `${unreadCount} New Events`;
-    return '1 New Event';
+    if (unreadCount !== 1) return `${unreadCount} Unread Events`;
+    return '1 Unread Event';
   };
 
-  const renderNotifications = notifications.map((notification, i) => (
+  const notificationsMap = notifications.map((notification, i) => (
     <Notification
       key={i}
       seen={notification.seen}
@@ -71,6 +71,15 @@ const PanelWrapper = ({
       </Notification.Content>
     </Notification>
   ));
+
+  const renderNotifications = (
+    <NotificationDrawer.PanelBody key="containsNotifications">
+      {showLoading
+        ? [notificationsMap, <Notification key="loading" type="loading" />]
+        : notificationsMap}
+    </NotificationDrawer.PanelBody>
+  );
+
   const renderClearReadButtons = (
     <NotificationDrawer.PanelAction key={panelkey}>
       <NotificationDrawer.PanelActionLink
@@ -105,10 +114,12 @@ const PanelWrapper = ({
     </NotificationDrawer.PanelAction>
   );
   const noNotificationsMessage = (
-    <EmptyState>
-      <EmptyStateIcon name="info" />
-      <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
-    </EmptyState>
+    <NotificationDrawer.PanelBody key="noNotifications">
+      <EmptyState>
+        <EmptyStateIcon name="info" />
+        <EmptyStateTitle>No Notifications Available</EmptyStateTitle>
+      </EmptyState>
+    </NotificationDrawer.PanelBody>
   );
 
   return (
@@ -121,19 +132,12 @@ const PanelWrapper = ({
       </NotificationDrawer.PanelHeading>
       <Collapse in={isExpanded}>
         <NotificationDrawer.PanelCollapse id={panelkey}>
-          <NotificationDrawer.PanelBody>
-            {notifications.length > 0
-              ? [
-                  showLoading
-                    ? [
-                        renderNotifications,
-                        <Notification key="loading" type="loading" />
-                      ]
-                    : renderNotifications,
-                  unreadCount > 0 ? renderClearReadButtons : renderClearButton
-                ]
-              : noNotificationsMessage}
-          </NotificationDrawer.PanelBody>
+          {notifications.length > 0
+            ? [
+                renderNotifications,
+                unreadCount > 0 ? renderClearReadButtons : renderClearButton
+              ]
+            : noNotificationsMessage}
         </NotificationDrawer.PanelCollapse>
       </Collapse>
     </NotificationDrawer.Panel>

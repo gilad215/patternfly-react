@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NotificationDrawerToggle } from '../NotificationDrawer/index';
+import { NotificationDrawer } from '../NotificationDrawer/index';
 import StatefulNotificationDrawerWrapper from './StatefulNotificationDrawerWrapper';
 
 class StatefulToggleNotificationDrawerWrapper extends React.Component {
@@ -28,7 +28,7 @@ class StatefulToggleNotificationDrawerWrapper extends React.Component {
   render() {
     return (
       <ul className="nav navbar-nav navbar-right navbar-iconic">
-        <NotificationDrawerToggle
+        <NotificationDrawer.Toggle
           hasUnreadMessages={this.state.hasUnreadMessages}
           onClick={this.toggleDrawer}
         />

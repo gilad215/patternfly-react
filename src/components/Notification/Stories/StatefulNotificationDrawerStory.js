@@ -142,6 +142,57 @@ const p2Notifications = [
         }
       ]
     }
+  },
+  {
+    id: 32,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
+  },
+  {
+    id: 33,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
+  },
+  {
+    id: 34,
+    seen: false,
+    level: 'error',
+    text: 'Foreman Community Newsletter - January 2029',
+    created_at: '2018-03-13T12:30:37.988Z',
+    actions: {
+      links: [
+        {
+          href:
+            'http://theforeman.org/2018/01/foreman-community-newsletter-january-2018.html',
+          title: 'Open',
+          external: true
+        }
+      ]
+    }
   }
 ];
 const p3Notifications = [
@@ -248,7 +299,7 @@ const panels = [
 const StatefulNotificationDrawerStory = stories => {
   stories.addWithInfo('Stateful Drawer Wrapper', '', () => {
     const story = (
-      <nav className="navbar navbar-pf-vertical" style={{ minHeight: '60px' }}>
+      <nav className="navbar navbar-pf-vertical">
         <nav className="collapse navbar-collapse">
           <StatefulToggleNotificationDrawerWrapper
             panels={panels}

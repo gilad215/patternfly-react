@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import NotificationDrawerWrapper from '../Wrappers/NotificationDrawerWrapper';
+import { NotificationDrawer } from '../NotificationDrawer/index';
 
 const handleClick = e => {
   e.preventDefault();
@@ -95,11 +96,10 @@ const WrapperNotificationDrawerStory = stories => {
       <nav className="navbar navbar-pf-vertical">
         <nav className="collapse navbar-collapse">
           <ul className="nav navbar-nav navbar-right navbar-iconic">
-            <li className="drawer-pf-trigger open">
-              <a className="nav-item-iconic" onClick={handleClick}>
-                <span className="fa fa-bell" title="Notifications" />
-              </a>
-            </li>
+            <NotificationDrawer.Toggle
+              hasUnreadMessages
+              onClick={handleClick}
+            />
           </ul>
         </nav>
         <NotificationDrawerWrapper
