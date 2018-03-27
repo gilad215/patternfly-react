@@ -44,7 +44,7 @@ const PanelWrapper = ({
           <MenuItem
             key={j}
             id={`notification-kebab-${j}`}
-            onClick={() => onClickedLink(link.href)}
+            onClick={() => onClickedLink(link)}
           >
             {link.title}
           </MenuItem>

@@ -14,7 +14,7 @@ class StatefulNotificationDrawerWrapper extends React.Component {
   }
 
   onClickLink = url => {
-    window.open(url);
+    window.open(url.href);
   };
 
   onMarkPanelAsRead = panelkey => {
