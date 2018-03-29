@@ -40,24 +40,26 @@ const PanelWrapper = ({
       seen={notification.seen}
       onClick={() => onNotificationClick(panelkey, notification.id)}
     >
-      <NotificationDrawer.Dropdown pullRight id={i}>
-        {notification.actions.links.map((link, j) => (
+      {Object.keys(notification.actions).length > 0 && (
+        <NotificationDrawer.Dropdown pullRight id={i}>
+          {notification.actions.links.map((link, j) => (
+            <MenuItem
+              key={j}
+              id={`notification-kebab-${j}`}
+              onClick={() => onClickedLink(link)}
+            >
+              {link.title}
+            </MenuItem>
+          ))}
+          <MenuItem divider />
           <MenuItem
-            key={j}
-            id={`notification-kebab-${j}`}
-            onClick={() => onClickedLink(link)}
+            id="notification-kebab-hide"
+            onClick={() => onNotificationHide(panelkey, notification.id)}
           >
-            {link.title}
+            Hide this notification
           </MenuItem>
-        ))}
-        <MenuItem divider />
-        <MenuItem
-          id="notification-kebab-hide"
-          onClick={() => onNotificationHide(panelkey, notification.id)}
-        >
-          Hide this notification
-        </MenuItem>
-      </NotificationDrawer.Dropdown>
+        </NotificationDrawer.Dropdown>
+      )}
       <Icon
         className="pull-left"
         type="pf"
