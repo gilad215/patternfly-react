@@ -97,6 +97,7 @@ class StatefulNotificationDrawerWrapper extends React.Component {
     return (
       <NotificationDrawerWrapper
         panels={this.state.panels}
+        maxPanelHeight={this.props.maxPanelHeight}
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
         isExpanded={this.state.isExpanded}
@@ -125,7 +126,9 @@ StatefulNotificationDrawerWrapper.propTypes = {
   /** is Drawer Expandable prop */
   isExpandable: PropTypes.bool,
   /** expanded Panel */
-  expandedPanel: PropTypes.string
+  expandedPanel: PropTypes.string,
+  /** Max Panel Height */
+  maxPanelHeight: PropTypes.string
 };
 StatefulNotificationDrawerWrapper.defaultProps = {
   panels: null,
@@ -133,7 +136,8 @@ StatefulNotificationDrawerWrapper.defaultProps = {
   updateUnreadCount: null,
   toggleDrawer: null,
   isExpandable: true,
-  expandedPanel: null
+  expandedPanel: null,
+  maxPanelHeight: null
 };
 
 export default StatefulNotificationDrawerWrapper;

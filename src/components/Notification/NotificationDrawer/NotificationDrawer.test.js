@@ -68,7 +68,7 @@ test('NotificationDrawer Panel Action and Link is working properly', () => {
 
 test('NotificationDrawer Panel Body is working properly', () => {
   const component = mount(
-    <NotificationDrawer.PanelBody>
+    <NotificationDrawer.PanelBody maxHeight="350px">
       <div>Child</div>
     </NotificationDrawer.PanelBody>
   );

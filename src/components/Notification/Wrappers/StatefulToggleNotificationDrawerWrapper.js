@@ -35,6 +35,7 @@ class StatefulToggleNotificationDrawerWrapper extends React.Component {
         {this.state.isDrawerOpen && (
           <StatefulNotificationDrawerWrapper
             panels={this.state.panels}
+            maxPanelHeight={this.props.maxPanelHeight}
             isDrawerOpen
             isExpandable={this.props.isExpandable}
             hasUnreadMessages
@@ -55,13 +56,16 @@ StatefulToggleNotificationDrawerWrapper.propTypes = {
   /** has Unread Messages Bool */
   hasUnreadMessages: PropTypes.bool,
   /** is Drawer Expandable */
-  isExpandable: PropTypes.bool
+  isExpandable: PropTypes.bool,
+  /** Max Panel Height */
+  maxPanelHeight: PropTypes.string
 };
 StatefulToggleNotificationDrawerWrapper.defaultProps = {
   panels: null,
   isDrawerOpen: false,
   hasUnreadMessages: false,
-  isExpandable: true
+  isExpandable: true,
+  maxPanelHeight: null
 };
 
 export default StatefulToggleNotificationDrawerWrapper;

@@ -57,6 +57,7 @@ exports[`NotificationDrawer Panel Action and Link is working properly 1`] = `
 exports[`NotificationDrawer Panel Body is working properly 1`] = `
 <div
   class="panel-body"
+  style="max-height: 350px;"
 >
   <div>
     Child

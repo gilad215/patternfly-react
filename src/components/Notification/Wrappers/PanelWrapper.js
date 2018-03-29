@@ -13,6 +13,7 @@ import getIconClass from './Icon.consts';
 const PanelWrapper = ({
   panelkey,
   panelName,
+  maxPanelHeight,
   className,
   notifications,
   isExpanded,
@@ -73,7 +74,10 @@ const PanelWrapper = ({
   ));
 
   const renderNotifications = (
-    <NotificationDrawer.PanelBody key="containsNotifications">
+    <NotificationDrawer.PanelBody
+      key="containsNotifications"
+      maxHeight={maxPanelHeight}
+    >
       {showLoading
         ? [notificationsMap, <Notification key="loading" type="loading" />]
         : notificationsMap}
@@ -151,7 +155,9 @@ PanelWrapper.propTypes = {
   /** function() togglePanel Click */
   togglePanel: PropTypes.func,
   /** show Loading notification Bool */
-  showLoading: PropTypes.bool
+  showLoading: PropTypes.bool,
+  /** Max Panel Height */
+  maxPanelHeight: PropTypes.string
 };
 PanelWrapper.defaultProps = {
   panelkey: '1',
@@ -165,7 +171,8 @@ PanelWrapper.defaultProps = {
   onNotificationHide: null,
   onMarkPanelAsClear: null,
   togglePanel: null,
-  showLoading: false
+  showLoading: false,
+  maxPanelHeight: null
 };
 
 export default PanelWrapper;

@@ -55,6 +55,7 @@ exports[`DrawerWraper is working properly 1`] = `
       >
         <div
           class="panel-body"
+          style="max-height: 350px;"
         >
           <div
             class="drawer-pf-notification unread"
@@ -457,6 +458,7 @@ exports[`PanelWraper is working properly 1`] = `
   >
     <div
       class="panel-body"
+      style="max-height: 350px;"
     >
       <div
         class="drawer-pf-notification unread"

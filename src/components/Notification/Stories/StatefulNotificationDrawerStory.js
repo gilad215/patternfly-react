@@ -303,6 +303,7 @@ const StatefulNotificationDrawerStory = stories => {
         <nav className="collapse navbar-collapse">
           <StatefulToggleNotificationDrawerWrapper
             panels={panels}
+            maxPanelHeight="350px"
             isDrawerOpen
             hasUnreadMessages
             isExpandable={boolean('is Drawer Expandable', true)}
