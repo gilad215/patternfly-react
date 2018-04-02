@@ -1,5 +1,5 @@
 import React from 'react';
-import { boolean } from '@storybook/addon-knobs';
+import { boolean, number } from '@storybook/addon-knobs';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import StatefulToggleNotificationDrawerWrapper from '../Wrappers/StatefulToggleNotificationDrawerWrapper';
@@ -303,7 +303,7 @@ const StatefulNotificationDrawerStory = stories => {
         <nav className="collapse navbar-collapse">
           <StatefulToggleNotificationDrawerWrapper
             panels={panels}
-            maxPanelHeight="350px"
+            maxPanelHeight={number('Panel Height', 364)}
             isDrawerOpen
             hasUnreadMessages
             isExpandable={boolean('is Drawer Expandable', true)}

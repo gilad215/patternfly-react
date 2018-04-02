@@ -1,6 +1,5 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { boolean } from '@storybook/addon-knobs';
 import { inlineTemplate } from '../../../../storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from '../../../../storybook/constants';
 import { Notification } from '../index';
@@ -13,7 +12,6 @@ const handleClick = e => {
   e.preventDefault();
   action('some on click')();
 };
-const expandedBool = boolean('Expanded Drawer', false);
 const basicNotificationDrawerStory = stories => {
   stories.addWithInfo('Notification Drawer', '', () => {
     const story = (
@@ -26,7 +24,7 @@ const basicNotificationDrawerStory = stories => {
             />
           </ul>
         </nav>
-        <NotificationDrawer expanded={expandedBool}>
+        <NotificationDrawer>
           <NotificationDrawer.Title id="1" title="Notifications" />
           <NotificationDrawer.Accordion>
             <NotificationDrawer.Panel>
