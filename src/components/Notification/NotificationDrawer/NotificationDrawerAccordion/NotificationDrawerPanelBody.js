@@ -21,7 +21,7 @@ NotificationDrawerPanelBody.propTypes = {
   /** Additional element css classes */
   className: PropTypes.string,
   /** Custom Height for Panel */
-  maxHeight: PropTypes.string
+  maxHeight: PropTypes.number
 };
 NotificationDrawerPanelBody.defaultProps = {
   className: '',

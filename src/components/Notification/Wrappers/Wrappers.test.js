@@ -100,7 +100,6 @@ test('PanelWraper is working properly', () => {
       onClickedLink={jest.fn()}
       onMarkPanelAsClear={jest.fn()}
       showLoading
-      maxPanelHeight="350px"
     />
   );
 
@@ -121,7 +120,6 @@ test('DrawerWraper is working properly', () => {
       onMarkPanelAsRead={jest.fn()}
       onMarkPanelAsClear={jest.fn()}
       onClickedLink={jest.fn()}
-      maxPanelHeight="350px"
     />
   );
 
@@ -138,7 +136,6 @@ test('StatefulNotificationDrawerWrapper is working properly', () => {
       panels={panel}
       isExpanded
       updateUnreadCount={mockFunc}
-      maxPanelHeight="350px"
     />
   );
   component.instance().onMarkPanelAsRead('1'); // panelKey
@@ -158,7 +155,6 @@ test('StatefulToggleNotificationDrawerWrapper is working properly', () => {
       panels={panel}
       isDrawerOpen
       hasUnreadMessages
-      maxPanelHeight="350px"
     />
   );
   component.instance().toggleDrawer();

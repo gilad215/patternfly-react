@@ -6,7 +6,7 @@ import { EmptyState, EmptyStateIcon, EmptyStateTitle } from '../../EmptyState';
 
 const NotificationDrawerWrapper = ({
   panels,
-  maxPanelHeight,
+  accordionHeight,
   toggleDrawerHide,
   toggleDrawerExpand,
   isExpandable,
@@ -24,7 +24,8 @@ const NotificationDrawerWrapper = ({
       key={i}
       panelName={panel.panelName}
       panelkey={panel.panelkey}
-      maxPanelHeight={maxPanelHeight}
+      panelCount={panels.length}
+      accordionHeight={accordionHeight}
       onClickedLink={onClickedLink}
       notifications={panel.notifications}
       togglePanel={togglePanel}
@@ -84,8 +85,8 @@ NotificationDrawerWrapper.propTypes = {
   isExpandable: PropTypes.bool,
   /** expanded Panel */
   expandedPanel: PropTypes.string,
-  /** Max Panel Height */
-  maxPanelHeight: PropTypes.string
+  /** Accordion Height */
+  accordionHeight: PropTypes.number
 };
 
 NotificationDrawerWrapper.defaultProps = {
@@ -101,7 +102,7 @@ NotificationDrawerWrapper.defaultProps = {
   onMarkPanelAsClear: null,
   isExpandable: true,
   expandedPanel: null,
-  maxPanelHeight: null
+  accordionHeight: null
 };
 
 export default NotificationDrawerWrapper;

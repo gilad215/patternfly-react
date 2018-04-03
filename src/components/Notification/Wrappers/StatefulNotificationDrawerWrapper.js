@@ -13,6 +13,14 @@ class StatefulNotificationDrawerWrapper extends React.Component {
     };
   }
 
+  componentDidMount = () => {
+    this.updateAccordionHeight();
+    window.addEventListener('resize', this.updateAccordionHeight);
+  };
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.updateAccordionHeight);
+  };
+
   onClickLink = url => {
     window.open(url.href);
   };
@@ -69,6 +77,14 @@ class StatefulNotificationDrawerWrapper extends React.Component {
     this.updateUnreadCount();
   };
 
+  updateAccordionHeight = () => {
+    if (document.getElementsByClassName('panel-group').length > 0) {
+      const accordionHeight = document.getElementsByClassName('panel-group')[0]
+        .clientHeight;
+      this.setState({ accordionHeight });
+    }
+  };
+
   togglePanel = key => {
     if (this.state.expandedPanel === key)
       this.setState({ expandedPanel: '-1' });
@@ -97,7 +113,7 @@ class StatefulNotificationDrawerWrapper extends React.Component {
     return (
       <NotificationDrawerWrapper
         panels={this.state.panels}
-        maxPanelHeight={this.props.maxPanelHeight}
+        accordionHeight={this.state.accordionHeight}
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
         isExpanded={this.state.isExpanded}
@@ -126,9 +142,7 @@ StatefulNotificationDrawerWrapper.propTypes = {
   /** is Drawer Expandable prop */
   isExpandable: PropTypes.bool,
   /** expanded Panel */
-  expandedPanel: PropTypes.string,
-  /** Max Panel Height */
-  maxPanelHeight: PropTypes.string
+  expandedPanel: PropTypes.string
 };
 StatefulNotificationDrawerWrapper.defaultProps = {
   panels: null,
@@ -136,8 +150,7 @@ StatefulNotificationDrawerWrapper.defaultProps = {
   updateUnreadCount: null,
   toggleDrawer: null,
   isExpandable: true,
-  expandedPanel: null,
-  maxPanelHeight: null
+  expandedPanel: null
 };
 
 export default StatefulNotificationDrawerWrapper;
