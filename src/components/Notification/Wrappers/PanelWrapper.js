@@ -13,8 +13,7 @@ import getIconClass from './Icon.consts';
 const PanelWrapper = ({
   panelkey,
   panelName,
-  panelCount,
-  accordionHeight,
+  panelHeight,
   className,
   notifications,
   isExpanded,
@@ -34,8 +33,6 @@ const PanelWrapper = ({
     if (unreadCount !== 1) return `${unreadCount} Unread Events`;
     return '1 Unread Event';
   };
-
-  const getPanelHeight = () => accordionHeight - (panelCount * 55 + 41);
 
   const notificationsMap = notifications.map((notification, i) => (
     <Notification
@@ -81,7 +78,7 @@ const PanelWrapper = ({
   const renderNotifications = (
     <NotificationDrawer.PanelBody
       key="containsNotifications"
-      maxHeight={getPanelHeight()}
+      maxHeight={panelHeight}
     >
       {showLoading
         ? [notificationsMap, <Notification key="loading" type="loading" />]
@@ -161,10 +158,8 @@ PanelWrapper.propTypes = {
   togglePanel: PropTypes.func,
   /** show Loading notification Bool */
   showLoading: PropTypes.bool,
-  /** Accordion Height */
-  accordionHeight: PropTypes.number,
-  /** Panel Count */
-  panelCount: PropTypes.number
+  /** panel Height */
+  panelHeight: PropTypes.number
 };
 PanelWrapper.defaultProps = {
   panelkey: '1',
@@ -179,8 +174,7 @@ PanelWrapper.defaultProps = {
   onMarkPanelAsClear: null,
   togglePanel: null,
   showLoading: false,
-  accordionHeight: null,
-  panelCount: 1
+  panelHeight: null
 };
 
 export default PanelWrapper;

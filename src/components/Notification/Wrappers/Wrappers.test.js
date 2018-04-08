@@ -91,6 +91,7 @@ test('PanelWraper is working properly', () => {
     <PanelWraper
       panelkey={panel.panelkey}
       panelName="panelName"
+      panelHeight={350}
       notifications={p1Notifications}
       isExpanded
       togglePanel={jest.fn()}
@@ -110,6 +111,7 @@ test('DrawerWraper is working properly', () => {
   const component = mount(
     <NotificationDrawerWrapper
       panels={panel}
+      panelHeight={350}
       toggleDrawerHide={jest.fn()}
       toggleDrawerExpand={jest.fn()}
       togglePanel={jest.fn()}

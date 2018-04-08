@@ -79,9 +79,15 @@ class StatefulNotificationDrawerWrapper extends React.Component {
 
   updateAccordionHeight = () => {
     if (document.getElementsByClassName('panel-group').length > 0) {
-      const accordionHeight = document.getElementsByClassName('panel-group')[0]
-        .clientHeight;
-      this.setState({ accordionHeight });
+      let panelHeight =
+        document.getElementsByClassName('panel-group')[0].clientHeight - 44; // 44 = Read/Clear Buttons Height
+
+      const panelsArray = document.getElementsByClassName('panel-heading');
+      Array.from(panelsArray).forEach(panel => {
+        panelHeight -= panel.offsetHeight;
+      });
+
+      this.setState({ panelHeight });
     }
   };
 
@@ -113,7 +119,7 @@ class StatefulNotificationDrawerWrapper extends React.Component {
     return (
       <NotificationDrawerWrapper
         panels={this.state.panels}
-        accordionHeight={this.state.accordionHeight}
+        panelHeight={this.state.panelHeight}
         togglePanel={this.togglePanel}
         toggleDrawerExpand={this.toggleDrawerExpand}
         isExpanded={this.state.isExpanded}
