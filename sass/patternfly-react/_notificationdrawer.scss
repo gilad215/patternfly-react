@@ -1,3 +1,39 @@
 .panel-body {
   overflow-y: auto;
 }
+.drawer-pf.drawer-alt-pf {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  .drawer-pf-title {
+    position: relative;
+  }
+  .panel-group {
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    bottom: initial;
+    top: initial;
+    .panel.panel-default.expanded { // This is where we need to add the 'in' class when the panel-collapse.in exists
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-collapse.in {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      .panel-body {
+        flex: 1 1 auto;
+        overflow-y: auto;
+      }
+    }
+  }
+  .drawer-pf-action {
+    padding: 10px 0;
+  }
+  .drawer-pf-action-link {
+    align-self: center;
+    margin: 0;
+  }
+}

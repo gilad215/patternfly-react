@@ -10,7 +10,7 @@ const NotificationDrawer = ({
   ...props
 }) => {
   const classes = classNames(
-    'drawer-pf drawer-pf-notifications',
+    'drawer-pf drawer-alt-pf drawer-pf-notifications',
     { 'drawer-pf-expanded': expanded },
     { hide },
     className
