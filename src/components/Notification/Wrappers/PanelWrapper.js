@@ -1,4 +1,4 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from 'react-bootstrap';
@@ -25,7 +25,7 @@ const PanelWrapper = ({
   onMarkPanelAsClear,
   showLoading
 }) => {
-  const classes = ClassNames({ expanded: isExpanded }, className);
+  const classes = classNames({ expanded: isExpanded }, className);
   const unreadCount = notifications.filter(notification => !notification.seen)
     .length;
 

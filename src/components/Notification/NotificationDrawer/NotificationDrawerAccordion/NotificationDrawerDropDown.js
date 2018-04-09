@@ -1,4 +1,4 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown } from '../../../Dropdown';
@@ -11,7 +11,7 @@ const NotificationDrawerDropDown = ({
   pullRight,
   ...props
 }) => {
-  const classes = ClassNames(
+  const classes = classNames(
     'dropdown',
     { 'pull-right': pullRight },
     'dropdown-kebab-pf',

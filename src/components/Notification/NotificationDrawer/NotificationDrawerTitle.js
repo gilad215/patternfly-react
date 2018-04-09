@@ -1,4 +1,4 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '../../Icon';
@@ -12,7 +12,7 @@ const NotificationDrawerTitle = ({
   className,
   ...props
 }) => {
-  const classes = ClassNames('drawer-pf-title', className);
+  const classes = classNames('drawer-pf-title', className);
 
   return (
     <div className={classes} {...props}>

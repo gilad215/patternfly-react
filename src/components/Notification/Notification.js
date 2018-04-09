@@ -1,10 +1,10 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../Spinner/Spinner';
 
 const Notification = ({ type, children, seen, className, ...props }) => {
-  const classes = ClassNames(
+  const classes = classNames(
     {
       'drawer-pf-notification': type === 'notification',
       'drawer-pf-loading text-center': type === 'loading'

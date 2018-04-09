@@ -1,9 +1,9 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotificationDrawerPanelCounter = ({ text, className, ...props }) => {
-  const classes = ClassNames('panel-counter', className);
+  const classes = classNames('panel-counter', className);
 
   return (
     <span className={classes} {...props}>

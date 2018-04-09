@@ -1,9 +1,9 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotificationDrawerPanelCollapse = ({ children, className, ...props }) => {
-  const classes = ClassNames('panel-collapse', className);
+  const classes = classNames('panel-collapse', className);
 
   return (
     <div className={classes} {...props}>

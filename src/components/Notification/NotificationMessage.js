@@ -1,9 +1,9 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotificationMessage = ({ children, className, ...props }) => {
-  const classes = ClassNames('drawer-pf-notification-message', className);
+  const classes = classNames('drawer-pf-notification-message', className);
 
   return (
     <span className={classes} {...props}>

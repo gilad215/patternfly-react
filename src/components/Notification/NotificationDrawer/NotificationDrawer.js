@@ -1,4 +1,4 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ const NotificationDrawer = ({
   className,
   ...props
 }) => {
-  const classes = ClassNames(
+  const classes = classNames(
     'drawer-pf drawer-pf-notifications',
     { 'drawer-pf-expanded': expanded },
     { hide },

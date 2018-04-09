@@ -1,4 +1,4 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,7 +8,7 @@ const NotificationDrawerPanelBody = ({
   className,
   ...props
 }) => {
-  const classes = ClassNames('panel-body', className);
+  const classes = classNames('panel-body', className);
   return (
     <div className={classes} style={{ maxHeight }} {...props}>
       {children}

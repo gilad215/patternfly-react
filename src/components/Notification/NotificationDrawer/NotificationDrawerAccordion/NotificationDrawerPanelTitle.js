@@ -1,9 +1,9 @@
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const NotificationDrawerPanelTitle = ({ children, className, ...props }) => {
-  const classes = ClassNames('panel-title', className);
+  const classes = classNames('panel-title', className);
 
   return (
     <h4 className={classes} {...props}>
