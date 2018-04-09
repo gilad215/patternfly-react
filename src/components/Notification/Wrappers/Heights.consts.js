@@ -1,0 +1,3 @@
+const READ_CLEAR_HEIGHT = 44;
+
+export { READ_CLEAR_HEIGHT };

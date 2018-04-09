@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NotificationDrawerWrapper from './NotificationDrawerWrapper';
+import { READ_CLEAR_HEIGHT } from './Heights.consts';
 
 class StatefulNotificationDrawerWrapper extends React.Component {
   constructor(props) {
@@ -80,12 +81,14 @@ class StatefulNotificationDrawerWrapper extends React.Component {
   updateAccordionHeight = () => {
     if (document.getElementsByClassName('panel-group').length > 0) {
       let panelHeight =
-        document.getElementsByClassName('panel-group')[0].clientHeight - 44; // 44 = Read/Clear Buttons Height
+        document.getElementsByClassName('panel-group')[0].clientHeight -
+        READ_CLEAR_HEIGHT;
 
-      const panelsArray = document.getElementsByClassName('panel-heading');
-      Array.from(panelsArray).forEach(panel => {
-        panelHeight -= panel.offsetHeight;
-      });
+      Array.from(document.getElementsByClassName('panel-heading')).forEach(
+        panel => {
+          panelHeight -= panel.offsetHeight;
+        }
+      );
 
       this.setState({ panelHeight });
     }
